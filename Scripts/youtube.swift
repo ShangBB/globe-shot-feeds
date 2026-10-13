@@ -214,7 +214,8 @@ func read<T: Decodable>(_ name: String) throws -> T {
 
 func write<T: Encodable>(_ value: T, _ name: String) throws {
     let encoder = JSONEncoder()
-    encoder.outputFormatting = [.prettyPrinted, .withoutEscapingSlashes]
+    // 键排序：这些文件每次重跑都会被整个覆盖，顺序不定的话 diff 全是噪声，看不出真正改了什么。
+    encoder.outputFormatting = [.prettyPrinted, .withoutEscapingSlashes, .sortedKeys]
     try encoder.encode(value).write(to: repoRoot().appending(path: name))
 }
 
@@ -479,8 +480,10 @@ func promote() throws {
         }
 
         let override = overrides[candidate.channelId]
+        // YouTube 偶尔会带出首尾空格，直接进 name 与 source 会跟着露到界面上。
+        let channelTitle = candidate.channelTitle.trimmingCharacters(in: .whitespacesAndNewlines)
         // id 跟着成品名走：中文频道名 slug 出来是空的，人工编辑层补了英文名之后才有意义。
-        let base = "yt-" + slug(override?.name ?? candidate.channelTitle)
+        let base = "yt-" + slug(override?.name ?? channelTitle)
         var id = base.count > 3 ? base : "yt-\(candidate.channelId)"
         if id == "yt-\(candidate.channelId)" {
             fallbackIds.append(candidate.channelTitle)
@@ -495,13 +498,13 @@ func promote() throws {
         seeds.append(Seed(
             id: id,
             channelId: candidate.channelId,
-            name: override?.name ?? candidate.channelTitle,
+            name: override?.name ?? channelTitle,
             country: country,
             city: override?.city,
             coordinate: override?.coordinate,
             category: override?.category ?? candidate.category,
             isLandmark: override?.isLandmark ?? false,
-            source: "YouTube · \(candidate.channelTitle)"
+            source: "YouTube · \(channelTitle)"
         ))
     }
 
