@@ -148,7 +148,9 @@ channels-source.json 里的频道数 ≤ 100
 
 ## 分发
 
-`data` 分支的根目录由 GitHub Pages 发布，脚本每天 force push 一个孤儿提交上去（分支上永远只有一个提交，不留历史）。
+`data` 分支的根目录由 GitHub Pages 发布，每次成功运行会 force push 一个孤儿提交上去（分支上永远只有一个提交，不留历史）。
+
+**定时任务暂时没挂**：目录 138 条超过单次配额上限，挂上去只会每两天失败一次。现在只手动触发（支持只刷前 N 条）。等第二轮挖掘完、目录定型后，再决定是收窄到 100 条以内还是改成分批轮换，然后把 `schedule` 加回 `refresh.yml`。
 
 ```
 https://<用户名>.github.io/globe-shot-feeds/live-youtube.json
