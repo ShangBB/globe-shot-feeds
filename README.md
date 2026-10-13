@@ -35,7 +35,12 @@ swift Scripts/youtube.swift promote
 
 # 日常：读 channels-source.json，产出 live-youtube.json
 YT_API_KEY=xxx swift Scripts/youtube.swift refresh
+
+# 联调：复用 candidates.json 里已抓到的 videoId，不发任何请求、不花配额，也能离线跑
+swift Scripts/youtube.swift refresh --reuse
 ```
+
+`--reuse` 产出的是**快照**——谁下播了它不知道，因为它是挖掘那一刻的位置。它只为客户端联调和离线场景存在，正式下发不要带这个参数。
 
 `curate` 与 `promote` 都不调 API、不花配额，改完随时重跑。
 

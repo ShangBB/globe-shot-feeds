@@ -350,7 +350,25 @@ func printGrouped(_ candidates: [Candidate]) {
 
 // MARK: - refresh
 
-func refresh(limit: Int?) async throws {
+/// 一条策展记录 + 解析出来的直播信息，合成 App 读的那条。
+func makeStream(seed: Seed, videoId: String, viewers: Int?) -> Stream {
+    Stream(
+        id: seed.id,
+        name: seed.name,
+        country: seed.country,
+        city: seed.city,
+        coordinate: seed.coordinate,
+        category: seed.category,
+        isLandmark: seed.isLandmark,
+        videoId: videoId,
+        watchUrl: "https://www.youtube.com/watch?v=\(videoId)",
+        thumbnail: "https://i.ytimg.com/vi/\(videoId)/hqdefault.jpg",
+        source: seed.source,
+        viewers: viewers
+    )
+}
+
+func refresh(limit: Int?, reuse: Bool) async throws {
     let all: [Seed] = try read("channels-source.json")
     guard !all.isEmpty else {
         throw ServiceError.input("channels-source.json 是空的，先跑 mine 再人工筛一遍")
@@ -359,6 +377,39 @@ func refresh(limit: Int?) async throws {
     let seeds = limit.map { Array(all.prefix($0)) } ?? all
     guard !seeds.isEmpty else {
         throw ServiceError.input("--limit \(limit ?? 0) 让这一批变成空的")
+    }
+
+    // 复用模式不发搜索请求，所以不受配额约束：它只是把 mine 当时抓到的 videoId 重新打包。
+    // 用途是客户端联调（也能离线跑），代价是位置是**快照**，谁下播了它不知道。
+    // 正式下发走下面那条完整路径。
+    if reuse {
+        let candidates: CandidateFile = try read("candidates.json")
+        let byChannel = Dictionary(
+            candidates.candidates.map { ($0.channelId, $0) },
+            uniquingKeysWith: { first, _ in first }
+        )
+
+        var streams: [Stream] = []
+        var missing: [String] = []
+        for seed in seeds {
+            guard let candidate = byChannel[seed.channelId] else {
+                missing.append(seed.id)
+                continue
+            }
+            streams.append(makeStream(seed: seed, videoId: candidate.videoId, viewers: candidate.viewers))
+        }
+
+        guard !streams.isEmpty else {
+            throw ServiceError.input("candidates.json 里一条都匹配不上 channels-source.json 的 channelId")
+        }
+
+        try write(Feed(schema: 1, generatedAt: timestamp(), streams: streams), "live-youtube.json")
+        print("复用 candidates.json 的 videoId（不发任何请求）：\(streams.count)/\(seeds.count) 条")
+        if !missing.isEmpty {
+            print("候选中没有、被跳过：\(missing.joined(separator: ", "))")
+        }
+        print("→ live-youtube.json（联调快照；正式数据不要带 --reuse）")
+        return
     }
 
     // 配额是项目级的，而且是**单日**上限。一次 refresh 会把这一批频道的搜索全部花在同一天，
@@ -404,20 +455,7 @@ func refresh(limit: Int?) async throws {
     var streams: [Stream] = []
     for seed in seeds {
         guard let videoId = liveByChannel[seed.channelId], let item = byVideoId[videoId] else { continue }
-        streams.append(Stream(
-            id: seed.id,
-            name: seed.name,
-            country: seed.country,
-            city: seed.city,
-            coordinate: seed.coordinate,
-            category: seed.category,
-            isLandmark: seed.isLandmark,
-            videoId: videoId,
-            watchUrl: "https://www.youtube.com/watch?v=\(videoId)",
-            thumbnail: "https://i.ytimg.com/vi/\(videoId)/hqdefault.jpg",
-            source: seed.source,
-            viewers: liveViewers(item)
-        ))
+        streams.append(makeStream(seed: seed, videoId: videoId, viewers: liveViewers(item)))
     }
 
     // 只有一路走到底才落盘。中途失败就让上一次的产物留着，
@@ -661,7 +699,7 @@ func option(_ arguments: [String], _ name: String) -> Int? {
 let arguments = Array(CommandLine.arguments.dropFirst())
 
 guard let command = arguments.first, !command.hasPrefix("--") else {
-    print("用法：swift Scripts/youtube.swift <mine|enrich|curate|promote|refresh> [--limit N] [--offset N]")
+    print("用法：swift Scripts/youtube.swift <mine|enrich|curate|promote|refresh> [--limit N] [--offset N] [--reuse]")
     exit(2)
 }
 
@@ -676,7 +714,7 @@ do {
     case "promote":
         try promote()
     case "refresh":
-        try await refresh(limit: option(arguments, "--limit"))
+        try await refresh(limit: option(arguments, "--limit"), reuse: arguments.contains("--reuse"))
     default:
         print("未知子命令：\(command)")
         exit(2)
