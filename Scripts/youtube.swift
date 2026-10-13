@@ -114,6 +114,9 @@ struct Stream: Codable, Sendable {
     let thumbnail: String
     let source: String
     let viewers: Int?
+    /// 这条流该怎么播。YouTube 只能走它自己的嵌入播放器，所以这个事实由 feed 声明，
+    /// 而不是让 App 从 URL 的域名去反推——知道答案的是产出方。
+    let playback: String
 }
 
 struct Feed: Codable, Sendable {
@@ -364,7 +367,8 @@ func makeStream(seed: Seed, videoId: String, viewers: Int?) -> Stream {
         watchUrl: "https://www.youtube.com/watch?v=\(videoId)",
         thumbnail: "https://i.ytimg.com/vi/\(videoId)/hqdefault.jpg",
         source: seed.source,
-        viewers: viewers
+        viewers: viewers,
+        playback: "youTubeEmbed"
     )
 }
 
