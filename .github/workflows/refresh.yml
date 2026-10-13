@@ -1,0 +1,55 @@
+name: Refresh the live feed
+
+on:
+  schedule:
+    # 每两天一次。配额是项目级的，硬约束是「频道数 ÷ 刷新间隔天数 ≤ 每天 100 次搜索」。
+    # 目录已超过 100 条，靠隔天刷换覆盖广度；24/7 机位的 videoId 本来就能稳定几个月。
+    # 改这里时必须同步改 Scripts/youtube.swift 里的 intervalDays，否则那层守卫形同虚设。
+    - cron: "17 6 */2 * *"
+  workflow_dispatch:
+
+permissions:
+  # 默认只读，不加这行推不到 data 分支。
+  contents: write
+
+jobs:
+  refresh:
+    # 用 macOS 是为了拿到自带的 Swift 工具链；仓库是公开的，分钟数不限，
+    # 所以这里不在意 macOS 的 10 倍计费。
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 生成 live-youtube.json
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+        run: swift Scripts/youtube.swift refresh
+
+      - name: 推到 data 分支
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          # 没有产物就跳过（例如上游失败、或此刻没有任何频道在直播），
+          # 让上一次的数据继续服务，绝不用空文件覆盖。
+          if [ ! -f "$GITHUB_WORKSPACE/live-youtube.json" ]; then
+            echo "本轮没有产物，跳过推送。"
+            exit 0
+          fi
+
+          cd "$RUNNER_TEMP"
+          rm -rf publish && mkdir publish && cd publish
+          git init -q
+          git checkout -q -b data
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+
+          cp "$GITHUB_WORKSPACE/live-youtube.json" .
+          git add live-youtube.json
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -qm "chore: refresh the live feed"
+
+          # 孤儿分支 + force push：data 分支上永远只有一个提交，不留历史。
+          git push -q --force origin data

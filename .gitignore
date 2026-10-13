@@ -1,0 +1,8 @@
+.DS_Store
+
+# 本地的密钥文件（`export YT_API_KEY=...`），绝不能提交。
+.env
+
+# 产物：只在 CI 里生成、推 data 分支，main 上不该有它。
+# 本地跑 refresh 验证时会落在工作区，别提交。
+live-youtube.json
