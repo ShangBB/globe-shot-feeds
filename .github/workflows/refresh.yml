@@ -7,6 +7,13 @@ on:
     # 超过 100 时脚本会直接拒绝运行（不跑一半、不烧配额），届时要么收窄目录，要么改成分批。
     - cron: "17 6 */2 * *"
   workflow_dispatch:
+    # 手动触发时可以只刷前 N 条：data 分支要等第一次成功运行才存在，
+    # 而目录没定型前 138 条会被配额守卫拦下，用这个先把部署链路和联调数据打通。
+    inputs:
+      limit:
+        description: "只刷前 N 个频道（联调用；留空表示全部）"
+        required: false
+        type: string
 
 permissions:
   # 默认只读，不加这行推不到 data 分支。
@@ -24,7 +31,14 @@ jobs:
       - name: 生成 live-youtube.json
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
-        run: swift Scripts/youtube.swift refresh
+          LIMIT: ${{ inputs.limit }}
+        run: |
+          set -euo pipefail
+          if [ -n "${LIMIT:-}" ]; then
+            swift Scripts/youtube.swift refresh --limit "$LIMIT"
+          else
+            swift Scripts/youtube.swift refresh
+          fi
 
       - name: 推到 data 分支
         env:
