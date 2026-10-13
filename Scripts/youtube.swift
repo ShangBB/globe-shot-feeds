@@ -349,23 +349,28 @@ func printGrouped(_ candidates: [Candidate]) {
 
 // MARK: - refresh
 
-func refresh() async throws {
-    let seeds: [Seed] = try read("channels-source.json")
-    guard !seeds.isEmpty else {
+func refresh(limit: Int?) async throws {
+    let all: [Seed] = try read("channels-source.json")
+    guard !all.isEmpty else {
         throw ServiceError.input("channels-source.json 是空的，先跑 mine 再人工筛一遍")
     }
 
-    // 配额是项目级的：频道数 ÷ 刷新间隔天数 必须 ≤ 每天 100 次搜索。
-    // 目录已经超过 100 条，所以靠"隔天刷"换取覆盖广度——24/7 机位的 videoId
-    // 本来就能稳定几个月，两天粒度完全够。改 cron 时必须同步改这里。
-    let intervalDays = 2
-    let searchesPerDay = (seeds.count + intervalDays - 1) / intervalDays
-    let searchLimit = Quota.perDay / Quota.perSearch
-    guard searchesPerDay <= searchLimit else {
-        throw ServiceError.quota("\(seeds.count) 个频道每 \(intervalDays) 天刷一次 = 每天约 \(searchesPerDay) 次搜索，超过 \(searchLimit) 次")
+    let seeds = limit.map { Array(all.prefix($0)) } ?? all
+    guard !seeds.isEmpty else {
+        throw ServiceError.input("--limit \(limit ?? 0) 让这一批变成空的")
     }
 
-    print("刷新 \(seeds.count) 个频道（每 \(intervalDays) 天一次，每天约 \(searchesPerDay) 次搜索）…\n")
+    // 配额是项目级的，而且是**单日**上限。一次 refresh 会把这一批频道的搜索全部花在同一天，
+    // 所以约束落在"这一批有多少个频道"上——隔天刷一次并不会让单次变便宜，这里不能按平均每天算。
+    //
+    // 超了就直接拒绝，不要跑一半：跑到配额耗尽会抛错、不写文件，而 workflow 的推送步骤看到
+    // 文件不存在就跳过，最后表现为"任务成功、整天配额没了、什么也没产出"。
+    let searchLimit = Quota.perDay / Quota.perSearch
+    guard seeds.count <= searchLimit else {
+        throw ServiceError.quota("这一批 \(seeds.count) 个频道要 \(seeds.count * Quota.perSearch) units，超过每天 \(Quota.perDay)；一次最多 \(searchLimit) 个。用 --limit 分批，或把 channels-source.json 收窄")
+    }
+
+    print("刷新 \(seeds.count)/\(all.count) 个频道…\n")
 
     var liveByChannel: [String: String] = [:]
     for seed in seeds {
@@ -668,7 +673,7 @@ do {
     case "promote":
         try promote()
     case "refresh":
-        try await refresh()
+        try await refresh(limit: option(arguments, "--limit"))
     default:
         print("未知子命令：\(command)")
         exit(2)

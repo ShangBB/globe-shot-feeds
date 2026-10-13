@@ -2,9 +2,9 @@ name: Refresh the live feed
 
 on:
   schedule:
-    # 每两天一次。配额是项目级的，硬约束是「频道数 ÷ 刷新间隔天数 ≤ 每天 100 次搜索」。
-    # 目录已超过 100 条，靠隔天刷换覆盖广度；24/7 机位的 videoId 本来就能稳定几个月。
-    # 改这里时必须同步改 Scripts/youtube.swift 里的 intervalDays，否则那层守卫形同虚设。
+    # 每两天一次。配额是项目级的，而且**一次 refresh 就把这批频道的搜索全花在同一天**，
+    # 所以硬约束是「channels-source.json 里的频道数 ≤ 100」——不是「平均每天 ≤ 100」。
+    # 超过 100 时脚本会直接拒绝运行（不跑一半、不烧配额），届时要么收窄目录，要么改成分批。
     - cron: "17 6 */2 * *"
   workflow_dispatch:
 
