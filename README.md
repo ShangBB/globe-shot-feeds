@@ -137,15 +137,22 @@ channels-source.json 里的频道数 ≤ 100
       "coordinate": { "latitude": 26.2379, "longitude": -80.1248 },
       "category": "beach",
       "isLandmark": false,
-      "videoId": "AbCdEf12345",
-      "watchUrl": "https://www.youtube.com/watch?v=AbCdEf12345",
-      "thumbnail": "https://i.ytimg.com/vi/AbCdEf12345/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=AbCdEf12345",
+      "playback": "youTubeEmbed",
       "source": "YouTube · City of Pompano Beach",
+      "is24x7": true,
       "viewers": 1240
     }
   ]
 }
 ```
+
+**字段就是 App 那边 `LiveChannel` 的字段，一个不多一个不少。** App 的解码是合成的，少一个必填键就**整份解不出来**——名字一旦不一致，坏的是全部条目而不是某一条。所以：
+
+- 改这里的字段之前，先看 `Packages/GlobeShotKit/Sources/Models/LiveChannel.swift`；
+- **能推出来的不重复携带**：video id 和缩略图地址都能从 `url` 得到，App 自己取；
+- `is24x7` 一律 `true`——清单是按常驻机位策展的，这一项只影响列表排序；
+- `playback` 声明这条流该用哪个播放器：`hls` 走 `AVPlayer`，`youTubeEmbed` 走 YouTube 官方嵌入播放器。
 
 `schema` 是版本号。两个仓库独立演进，服务端加字段时老版本 App 不该解崩。
 

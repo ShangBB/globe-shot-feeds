@@ -101,6 +101,11 @@ struct SeedOverride: Codable, Sendable {
 }
 
 /// refresh 的产物，App 读它。
+///
+/// **字段就是 App 那边 `LiveChannel` 的字段**，一个不多一个不少。App 的解码是合成的，
+/// 少一个必填键就整份解不出来——而两边的名字一旦不一致，坏的是全部条目，不是某一条。
+/// 所以：改这里之前先看 `LiveChannel`；能推出来的东西（videoId、缩略图地址）不重复携带，
+/// App 从 `url` 里取。
 struct Stream: Codable, Sendable {
     let id: String
     let name: String
@@ -109,14 +114,14 @@ struct Stream: Codable, Sendable {
     let coordinate: Coordinate?
     let category: String
     let isLandmark: Bool
-    let videoId: String
-    let watchUrl: String
-    let thumbnail: String
-    let source: String
-    let viewers: Int?
+    let url: String
     /// 这条流该怎么播。YouTube 只能走它自己的嵌入播放器，所以这个事实由 feed 声明，
     /// 而不是让 App 从 URL 的域名去反推——知道答案的是产出方。
     let playback: String
+    let source: String
+    /// 清单是按常驻机位策展的，所以一律 true。这一项只影响列表的排序优先级。
+    let is24x7: Bool
+    let viewers: Int?
 }
 
 struct Feed: Codable, Sendable {
@@ -363,12 +368,11 @@ func makeStream(seed: Seed, videoId: String, viewers: Int?) -> Stream {
         coordinate: seed.coordinate,
         category: seed.category,
         isLandmark: seed.isLandmark,
-        videoId: videoId,
-        watchUrl: "https://www.youtube.com/watch?v=\(videoId)",
-        thumbnail: "https://i.ytimg.com/vi/\(videoId)/hqdefault.jpg",
+        url: "https://www.youtube.com/watch?v=\(videoId)",
+        playback: "youTubeEmbed",
         source: seed.source,
-        viewers: viewers,
-        playback: "youTubeEmbed"
+        is24x7: true,
+        viewers: viewers
     )
 }
 
