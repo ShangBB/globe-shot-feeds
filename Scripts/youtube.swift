@@ -71,6 +71,8 @@ struct Candidate: Codable, Sendable {
     let videoId: String
     let title: String
     var viewers: Int?
+    /// 卡片上那张静帧。挖掘收尾时从 `videos.list` 顺手记下，`refresh --reuse` 重新打包时直接带走。
+    var thumbnail: String?
     /// 频道自报的国家（`channels.list` 的 `snippet.country`）。是**提示**不是事实：
     /// 频道注册地不一定是镜头所在地。人工筛的时候用它归拢，不要直接当数据用。
     var channelCountry: String?
@@ -104,8 +106,7 @@ struct SeedOverride: Codable, Sendable {
 ///
 /// **字段就是 App 那边 `LiveChannel` 的字段**，一个不多一个不少。App 的解码是合成的，
 /// 少一个必填键就整份解不出来——而两边的名字一旦不一致，坏的是全部条目，不是某一条。
-/// 所以：改这里之前先看 `LiveChannel`；能推出来的东西（videoId、缩略图地址）不重复携带，
-/// App 从 `url` 里取。
+/// 所以：改这里之前先看 `LiveChannel`；能推出来的东西（videoId）不重复携带，App 从 `url` 里取。
 struct Stream: Codable, Sendable {
     let id: String
     let name: String
@@ -122,6 +123,9 @@ struct Stream: Codable, Sendable {
     /// 清单是按常驻机位策展的，所以一律 true。这一项只影响列表的排序优先级。
     let is24x7: Bool
     let viewers: Int?
+    /// 卡片上那张静帧。**不**从 videoId 推：直播这张图由 YouTube 随画面刷新，
+    /// 拼 `i.ytimg.com` 的固定路径拿到的可能是旧画面，而且那条路径不是我们能依赖的接口。
+    let thumbnail: String?
 }
 
 struct Feed: Codable, Sendable {
@@ -149,7 +153,19 @@ struct SearchResponse: Decodable {
 
 struct VideosResponse: Decodable {
     struct Item: Decodable {
-        struct Snippet: Decodable { let liveBroadcastContent: String }
+        struct Snippet: Decodable {
+            let liveBroadcastContent: String
+            let thumbnails: Thumbnails?
+        }
+        /// 尺寸是按名字给的，任意一档都可能缺。挑到的那档用最大的一张：
+        /// 卡片是裁切显示，原图越大越经得起裁。
+        struct Thumbnails: Decodable {
+            struct Thumbnail: Decodable { let url: String }
+            let maxres: Thumbnail?
+            let standard: Thumbnail?
+            let high: Thumbnail?
+            let medium: Thumbnail?
+        }
         struct Status: Decodable { let embeddable: Bool? }
         struct ContentDetails: Decodable {
             struct RegionRestriction: Decodable {
@@ -336,6 +352,13 @@ func liveViewers(_ item: VideosResponse.Item) -> Int? {
     item.liveStreamingDetails?.concurrentViewers.flatMap(Int.init)
 }
 
+/// 卡片上那张静帧的地址。直播的这张图由 YouTube 随画面刷新，所以取它给的地址，
+/// 而不是让 App 拼 `i.ytimg.com` 的固定路径——那条路径不归我们管，也拿不到实时画面。
+func bestThumbnail(_ item: VideosResponse.Item) -> String? {
+    let sizes = item.snippet.thumbnails
+    return sizes?.maxres?.url ?? sizes?.standard?.url ?? sizes?.high?.url ?? sizes?.medium?.url
+}
+
 /// 单次几十个请求连着打没必要把限流和配额一次吃满。
 func pause() async throws {
     try await Task.sleep(for: .milliseconds(300))
@@ -359,7 +382,7 @@ func printGrouped(_ candidates: [Candidate]) {
 // MARK: - refresh
 
 /// 一条策展记录 + 解析出来的直播信息，合成 App 读的那条。
-func makeStream(seed: Seed, videoId: String, viewers: Int?) -> Stream {
+func makeStream(seed: Seed, videoId: String, viewers: Int?, thumbnail: String?) -> Stream {
     Stream(
         id: seed.id,
         name: seed.name,
@@ -372,7 +395,8 @@ func makeStream(seed: Seed, videoId: String, viewers: Int?) -> Stream {
         playback: "youTubeEmbed",
         source: seed.source,
         is24x7: true,
-        viewers: viewers
+        viewers: viewers,
+        thumbnail: thumbnail
     )
 }
 
@@ -404,7 +428,14 @@ func refresh(limit: Int?, reuse: Bool) async throws {
                 missing.append(seed.id)
                 continue
             }
-            streams.append(makeStream(seed: seed, videoId: candidate.videoId, viewers: candidate.viewers))
+            streams.append(
+                makeStream(
+                    seed: seed,
+                    videoId: candidate.videoId,
+                    viewers: candidate.viewers,
+                    thumbnail: candidate.thumbnail
+                )
+            )
         }
 
         guard !streams.isEmpty else {
@@ -463,7 +494,14 @@ func refresh(limit: Int?, reuse: Bool) async throws {
     var streams: [Stream] = []
     for seed in seeds {
         guard let videoId = liveByChannel[seed.channelId], let item = byVideoId[videoId] else { continue }
-        streams.append(makeStream(seed: seed, videoId: videoId, viewers: liveViewers(item)))
+        streams.append(
+            makeStream(
+                seed: seed,
+                videoId: videoId,
+                viewers: liveViewers(item),
+                thumbnail: bestThumbnail(item)
+            )
+        )
     }
 
     // 只有一路走到底才落盘。中途失败就让上一次的产物留着，
@@ -479,15 +517,27 @@ func enrich() async throws {
     let channelIds = Array(Set(file.candidates.map(\.channelId)))
     let countries = try await fetchChannelCountries(ids: channelIds)
 
+    // 静帧要单独补一趟：候选池是分批挖的，早先那几批写盘时还没记这一项。
+    let details = try await fetchDetails(ids: file.candidates.map(\.videoId))
+    let thumbnails = Dictionary(
+        details.compactMap { item in bestThumbnail(item).map { (item.id, $0) } },
+        uniquingKeysWith: { first, _ in first }
+    )
+
     var candidates = file.candidates
     for index in candidates.indices {
         candidates[index].channelCountry = countries[candidates[index].channelId]
+        if let url = thumbnails[candidates[index].videoId] {
+            candidates[index].thumbnail = url
+        }
     }
 
     try write(CandidateFile(generatedAt: timestamp(), candidates: candidates), "candidates.json")
 
     let labeled = candidates.filter { $0.channelCountry != nil }.count
+    let pictured = candidates.filter { $0.thumbnail != nil }.count
     print("补完频道国家：\(labeled)/\(candidates.count) 条有标注（其余频道没有公开这一项）")
+    print("补完卡片静帧：\(pictured)/\(candidates.count) 条")
     printGrouped(candidates)
 }
 
@@ -654,6 +704,7 @@ func mine(limit: Int?, offset: Int) async throws {
                 videoId: videoId,
                 title: item.snippet.title,
                 viewers: nil,
+                thumbnail: nil,
                 channelCountry: nil
             )
             added += 1
@@ -671,14 +722,17 @@ func mine(limit: Int?, offset: Int) async throws {
     // 交出去的就是已经过完三道校验的候选。
     let details = try await fetchDetails(ids: byChannel.values.map(\.videoId))
     var viewersByVideoId: [String: Int?] = [:]
+    var thumbnailByVideoId: [String: String] = [:]
     for item in details where isPlayable(item) {
         viewersByVideoId[item.id] = liveViewers(item)
+        if let url = bestThumbnail(item) { thumbnailByVideoId[item.id] = url }
     }
 
     var kept: [Candidate] = byChannel.values.compactMap { candidate -> Candidate? in
         guard viewersByVideoId.keys.contains(candidate.videoId) else { return nil }
         var copy = candidate
         copy.viewers = viewersByVideoId[candidate.videoId] ?? nil
+        copy.thumbnail = thumbnailByVideoId[candidate.videoId]
         return copy
     }
 
