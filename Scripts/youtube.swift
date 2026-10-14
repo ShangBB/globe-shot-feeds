@@ -1075,6 +1075,98 @@ func enrich() async throws {
 
 // MARK: - promote
 
+// MARK: - 自动命名
+
+/// 给没有人工命名的条目**自动起名字**。
+///
+/// 名字是给用户看的（卡片标题），而**频道名不是机位的名字**——实测频道名长这样：
+/// `ふもとっぱらチャンネル`、`webcamsdemexico`、`ii-nami com`、`ABS秋田放送`，拿来当相机名没有意义；
+/// 机位的地名在**视频标题**里。所以从标题里剥：先去掉平台样板词（LIVE / 24-7 / ライブカメラ /
+/// 即時影像 / 4K / 日期 / 话题标签 / emoji），再按分隔符切出第一个有意义的片段。
+///
+/// 这是**机器的近似**：能给出"新宿・歌舞伎町"、"Mount Fuji"、"Miami Skyline" 这种地名级结果，
+/// 但不如人写的好（人还会顺手把它翻成英文）。所以 `seeds-overrides.json` 里人工写的名字永远优先。
+enum AutoName {
+    /// 样板词。删掉它们，剩下的通常就是地名或机位名。
+    static let junk = [
+        // emoji 与国旗
+        "[\\x{1F300}-\\x{1FAFF}\\x{2600}-\\x{27BF}\\x{FE0F}\\x{1F1E6}-\\x{1F1FF}]",
+        // 时段与直播态
+        "\\b24/7\\b|\\b24h\\b|24\\s*[小時时]間?|\\bLIVE\\b|ライブ|生中継|中継|配信|直播|直擊|實況|实况|\\bEN\\s*VIVO\\b|\\bAO\\s*VIVO\\b|\\bEN\\s*DIRECT(O)?\\b|\\bDIRECTO\\b|\\bSTREAM(ING)?\\b|\\bLIVESTREAM\\b",
+        // 机位词本身（名字里不需要它：整个 App 就是机位）
+        "ライブカメラ|ライブカム|\\bLIVE\\s*CAM(ERA)?\\b|\\bWEBCAMS?\\b|\\bWEB\\s*CAM\\b|\\bCAMS?\\b|CAMERA|CÂMERA|CÁMARA|KAMERA|КАМЕРА|カメラ|كاميرا|即時影像|實況影像",
+        // 电视台/机构的尾巴与天气节目名
+        "お天気|天気|気象|期間限定|\\b公式\\b|官方頻道|官方频道",
+        // 画质与编号
+        "\\b4K\\b|\\b2K\\b|\\bHD\\b|\\bHDR\\b|1080p|2160p|\\bFULLHD\\b",
+        // 日期与时间
+        "\\d{4}[/.\\-]\\d{1,2}[/.\\-]\\d{1,2}|\\d{1,2}月\\d{1,2}日|\\d{1,2}:\\d{2}(:\\d{2})?",
+        "#\\S+",
+    ]
+
+    /// 切分位置：分隔符与右引号/开括号之后的内容都不属于机位名。
+    static let separators = "[|｜/\\\\「『【\\[［（(｛{」』】\\]］）)｝}:：,，;；•·★☆✦~〜]+"
+
+    /// 名字上限。CJK 没有词边界，所以中文按字数直接截，西文按最后一个空格截。
+    static let maximumLength = 42
+
+    /// 一段有意义的名字至少要这么长（短的通常是残留的标点或单字母）。
+    static let minimumLength = 2
+
+    /// 像频道号而不是机位名的片段：`オノデンch`、`ii-nami com` 这种。
+    static func looksLikeHandle(_ text: String) -> Bool {
+        let lower = text.lowercased()
+        return !text.contains(" ") && text.count <= 10 && (lower.hasSuffix("ch") || lower.hasSuffix("tv") || lower.hasSuffix("com"))
+    }
+
+    /// 按上限截断：有空格按词边界，没有（中文）直接按字数。
+    static func truncate(_ text: String) -> String {
+        guard text.count > maximumLength else { return text }
+        let clipped = String(text.prefix(maximumLength))
+        if let space = clipped.lastIndex(of: " ") { return String(clipped[clipped.startIndex..<space]) }
+        return clipped
+    }
+
+    static func name(from title: String, fallback: String) -> String {
+        if let picked = segment(of: title) { return picked }
+        if let picked = segment(of: fallback) { return picked }
+        return fallback.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    /// 全角字符折成 ASCII：`ＬＩＶＥ` 与 `［］` 不折的话跟不上样板词规则（实测漏了 `石垣島７３０交差点ＬＩＶＥ`）。
+    static func folded(_ text: String) -> String {
+        String(String.UnicodeScalarView(text.unicodeScalars.map { scalar in
+            (0xFF01...0xFF5E).contains(scalar.value) ? Unicode.Scalar(scalar.value - 0xFEE0)! : scalar
+        }))
+    }
+
+    /// 剥完样板词、按分隔符切出的第一个像名字的片段。
+    private static func segment(of text: String) -> String? {
+        var cleaned = folded(text)
+        for pattern in junk {
+            cleaned = cleaned.replacingOccurrences(of: pattern, with: " ", options: [.regularExpression, .caseInsensitive])
+        }
+        // **带空格的**横线是分隔符（`Pier - El Dorado`），不带空格的不是（`BR-101`、`Três-Rios`）。
+        cleaned = cleaned.replacingOccurrences(of: "\\s+[-–—]\\s+", with: "\u{1}", options: [.regularExpression])
+        // 分隔符统一成一个不会出现在内容里的哨兵，再切。
+        cleaned = cleaned.replacingOccurrences(of: separators, with: "\u{1}", options: [.regularExpression])
+        // 全角空格与连续空白压成一个空格。
+        // 注意 ICU 的写法是 `\x{3000}`，写成 `\u{3000}` 会**静默失效**（`replacingOccurrences` 对
+        // 无效正则不报错，直接返回原文）——实测踩过一次。
+        cleaned = cleaned.replacingOccurrences(of: "[\\s\\x{3000}]+", with: " ", options: [.regularExpression])
+
+        for piece in cleaned.components(separatedBy: "\u{1}") {
+            let blank = CharacterSet(charactersIn: " \u{3000}-–—.。、,:：")
+            var words = piece.trimmingCharacters(in: blank).split(separator: " ").map(String.init)
+            // 剥掉切剩下的单字母前缀：`Cámara en Vivo y Directo…` 里的 `y` 是西语的 "and"。
+            while let first = words.first, first.count == 1, words.count > 1 { words.removeFirst() }
+            let name = words.joined(separator: " ").trimmingCharacters(in: blank)
+            if name.count >= minimumLength, !looksLikeHandle(name) { return truncate(name) }
+        }
+        return nil
+    }
+}
+
 /// id 里只留 ASCII：它会被 App 的观看历史当键用，混进中日韩字符只会让排查变难。
 /// 名字全是非 ASCII 的频道会返回空串，调用方要负责兜底。
 func slug(_ text: String) -> String {
@@ -1098,6 +1190,7 @@ func promote() throws {
     var usedIds: Set<String> = []
     var skipped: [String] = []
     var fallbackIds: [String] = []
+    var autoNamed: [String] = []
 
     for candidate in file.candidates {
         // 没有国家就不发出去。App 按国家分组、地图也按国家落点，
@@ -1110,8 +1203,13 @@ func promote() throws {
         let override = overrides[candidate.channelId]
         // YouTube 偶尔会带出首尾空格，直接进 name 与 source 会跟着露到界面上。
         let channelTitle = candidate.channelTitle.trimmingCharacters(in: .whitespacesAndNewlines)
+        // 没有人工命名时，机器从**标题**里剥一个（见 AutoName）——频道名多半不是机位的名字，
+        // 实测有 `ふもとっぱらチャンネル`、`webcamsdemexico`、`ii-nami com` 这种。
+        let autoName = AutoName.name(from: candidate.title, fallback: channelTitle)
+        let displayName = override?.name ?? autoName
+        if override?.name == nil { autoNamed.append(channelTitle) }
         // id 跟着成品名走：中文频道名 slug 出来是空的，人工编辑层补了英文名之后才有意义。
-        let base = "yt-" + slug(override?.name ?? channelTitle)
+        let base = "yt-" + slug(displayName)
         var id = base.count > 3 ? base : "yt-\(candidate.channelId)"
         if id == "yt-\(candidate.channelId)" {
             fallbackIds.append(candidate.channelTitle)
@@ -1126,7 +1224,7 @@ func promote() throws {
         seeds.append(Seed(
             id: id,
             channelId: candidate.channelId,
-            name: override?.name ?? channelTitle,
+            name: displayName,
             country: country,
             city: override?.city,
             coordinate: override?.coordinate,
@@ -1146,10 +1244,185 @@ func promote() throws {
 
     print("产出 channels-source.json：\(seeds.count) 条")
     print("按国家：\(Dictionary(grouping: seeds, by: \.country).mapValues(\.count).sorted { $0.key < $1.key }.map { "\($0.key):\($0.value)" }.joined(separator: "  "))")
-    print("地点名还是频道名（等你编辑）：\(seeds.filter { overrides[$0.channelId]?.name == nil }.count) 条")
+    print("名字由机器从标题剥出来的：\(autoNamed.count) 条（`seeds-overrides.json` 里写一条就能覆盖）")
     print("id 退化成频道 id（名字里没有 ASCII）：\(fallbackIds.count) 条 \(fallbackIds)")
     print("因缺国家而跳过：\(skipped.count) 条 \(skipped)")
     print("坐标已填：\(seeds.filter { $0.coordinate != nil }.count) 条（按既有口径，不查证就不填）")
+}
+
+// MARK: - 自动筛选
+
+/// 一个候选该不该进目录，以及它缺的国家大概在哪。
+struct AutoVerdict {
+    let keep: Bool
+    /// 剔掉的原因（`keep` 为真时是 nil）。
+    let reason: String?
+    /// 频道没自报国家时，按标题语言/地名**大致**猜的；拿不准就是 nil → 丢弃。
+    let country: String?
+    /// 这个国家是**哪一层**给的（`place:` / `script:` / `query:`）——排错时要知道是规则哪一段判的。
+    let countrySource: String?
+}
+
+/// 自动筛选：把候选池里不属于"街道 / 风景的常驻机位"的条目按题材剔掉，并给缺国家的条目
+/// 猜一个国家。
+///
+/// **用户口径（2026-10-14）：不再人工筛选。** 规则是从目录前 96 条人工排除的原因里抽出来的
+/// （主题收敛 / 压缩后院类 / 疑似循环素材 / 宗教 / 博彩 / 地缘政治 / 议会直播…），所以它和
+/// `curation.json` 里那批人写的条目是同一套口径，只是执行者换成了机器。
+///
+/// 几条必须写下来的坑：
+/// - **葡萄牙语 `câmara` 是"议院"不是"相机"**，西语 `cámara`（á）才是相机——差一个 â，正好分开。
+///   巴西的 `Câmara Municipal` / `Tv Câmara` 是市议会直播，实测一次挖进来 7 条。
+/// - `\bnews\b` 不能一刀切：目录里有 `News 8 Now City Cam`（电视台的城市机位，该留），
+///   也有 `Jovem Pan News`（新闻节目，该剔）。所以新闻/电视这类走**软规则**：只有连机位词都
+///   没有时才剔。
+/// - 动物词要连词形一起匹配：`Birds Eye View Malta` 是一条**天空线机位**（频道名里有鸟），
+///   而 `bird feeder` / `nest cam` 才是动物题材。
+enum AutoFilter {
+    /// 机位词。软规则用它判断"这条到底是机位还是节目"。
+    static let cameraLike =
+        "\\bcam\\b|\\bcams\\b|camera|webcam|web\\.?cam|ライブカメラ|カメラ|即時影像|實況|実況|실시간|카메라|камера|كاميرا|cámara|câmera|webkamera|livecam"
+    // 注意：`24/7` 与 `24h` **不算机位词**——新闻台、助眠电台、游戏直播全都这么写，
+    // 把它当机位信号会让软规则失效（实测放过了一条 `TaiwanNewsTV 24h live news`）。
+
+    /// 命中即剔：题材明确不是"常驻机位"。
+    static let banned: [(pattern: String, reason: String)] = [
+        // 议会 / 立法直播（葡语 câmara = 议院）
+        ("câmara municipal|câmara de vereadores|câmara cível|tv câmara|vereadores|sessão solene|city council|parliament|council meeting|議会|市議会", "议会/政务直播"),
+        // 葡语"由某机构发起的直播"：实测一次进来 7 条，包括 `CÂMARA MUNICIPAL`、`CIA AgRoss Camera 14`
+        // 这类企业/机构的编号摄像头。**注意 `Câmara de Lobos`（马德拉的一个镇）不能中招**，
+        // 所以这里只匹配 `transmissão ao vivo de` 这个整句，不匹配单独的 `câmara de`。
+        ("transmissão ao vivo de", "机构/议会转播流"),
+        // 动物 / 鸟类 / 水族 / 宠物（只认强词形）
+        ("\\beagle\\b|\\bfalcon\\b|\\bosprey\\b|bird\\s*(feeder|nest|bath|house)|feeder\\s*cam|nest\\s*cam|\\bkoi\\b|goldfish|aquarium|\\bzoo\\b|wildlife|\\bpuffin\\b|\\bpenguin\\b|hummingbird|aviary|ペンギン|水族館|動物園|小猫|子猫", "动物/鸟类题材"),
+        // 机场 / 航空
+        ("airport|aeroporto|aeropuerto|flughafen|aviation|plane\\s*spot|spotting|runway|空港|飛行機|항공|\\bjet\\b|a380|b777|b747|air\\s*traffic\\s*control", "机场/航空题材"),
+        // 铁路 / 车站
+        ("railway|rail\\s*cam|railcam|\\btrain\\b|\\btrains\\b|\\btram\\b|shinkansen|新幹線|鉄道|路面電車|駅前|\\bmetro\\b|subway|bahnhof|stazione|estación de tren", "铁路/车站题材"),
+        // 音乐 / 电台 / 助眠
+        ("\\bjazz\\b|lofi|lo-fi|\\bmusic\\b|\\bradio\\b|beats to|\\bsleep\\b|\\brelax\\b|ambien|meditation|\\basmr\\b|podcast|音楽|ラジオ|musik|música|rádio|musique|музыка|음악", "音乐/电台题材"),
+        // 疑似循环素材
+        ("pre-recorded|prerecorded|compilation|\\bloop\\b|\\breplay\\b|24/7 music|slow tv", "疑似循环素材"),
+        // 游戏 / 主播
+        ("gameplay|\\bgta\\b|minecraft|fortnite|esports|roblox|twitch|mukbang|unboxing|\\bvlog\\b|walkthrough|speedrun|jogando|jogar|\\bfazenda\\b|reality show|\\bbbbr\\b", "游戏/主播/真人秀题材"),
+        // 宗教
+        ("\\bchurch\\b|cathedral|basilica|\\btemple\\b|mosque|\\bshrine\\b|\\bchapel\\b|vatican|kaaba|monastery|convent|iglesia|église|kirche|chiesa|церковь|神社|寺院|修道院|教堂|清真寺", "宗教题材"),
+        // 博彩
+        ("casino|lottery|betting|apuestas|\\bjackpot\\b|\\bpoker\\b", "博彩题材"),
+        // 医院 / 手术
+        ("hospital|surgery|\\bclinic\\b|ambulance", "医院题材"),
+        // 赛事 / 活动
+        ("tournament|championship|\\bconcert\\b|festival|oktoberfest|\\bparade\\b|marathon|olympic|futebol|vôlei|volei|basquete", "赛事/活动题材"),
+        // 抗议 / 冲突
+        ("protest|\\briot\\b|\\bwar\\b|invasion|missile|\\bconflict\\b|frontline|military", "抗议/冲突题材"),
+        // 移动机位（追风车、行车记录）——常驻机位是固定机位，这是产品前提
+        ("storm\\s*chas|chasing|dashcam", "移动机位，非常驻"),
+
+        // ↓ 以下七条是**第二轮补的**（2026-10-14 首次 dry-run 后逐条复核保留项时抓到的漏网），
+        //   每条都对应实测放进来的具体条目，不是凭想象加的。
+        ("ハムスター|チンチラ|猫|ねこ|犬|いぬ|ペット|おもち部屋|ロボロフスキー|\\bpossum\\b|chinchilla|hamster", "宠物题材"),
+        ("oiseaux|oiseau|ornitho|vögel|\\bvogel\\b", "鸟类题材（法/德语）"),
+        ("для детей|мульт|детск|\\bkids\\b|\\bcartoon\\b|desenho|animação|infantil|アニメ|子供向け", "儿童/卡通频道"),
+        ("medjugorje|apparition|pilgrim|朝聖|進香|受天宮|青雲宮|天后宮|媽祖|廟", "宗教/朝圣题材"),
+        ("踏切|\\bJR\\b|西武線|kolej|\\btrem\\b|pociąg|駅周辺|駅付近", "铁路题材（延伸：踏切/私铁/波兰语）"),
+        ("incendio|wildfire|huracán|hurricane|typhoon|颱風|台风|地震|earthquake", "灾害/新闻事件直播"),
+        ("\\bISS\\b|\\bnasa\\b|space station", "太空机位（世界地图上落不了点）"),
+        ("焚化|垃圾場|污水|\\bfactory\\b", "工业设施，非街景"),
+        ("停車場|\\bparking\\b", "停车场机位，非街景"),
+    ]
+
+    /// 只有**连机位词都没有**时才剔。
+    static let softBanned: [(pattern: String, reason: String)] = [
+        ("\\bnews\\b|\\btv\\b|notícias|noticias|jornal|新聞|ニュース|生中継|weather|meteo|天氣|天気|気象|\\bsport\\b|esporte", "是节目/新闻，且看不出是机位"),
+        ("walking tour|city walk|street walk", "行走类直播，且看不出是机位"),
+    ]
+
+    /// 国家线索一：标题或频道名里点名的国家/强指向地名。
+    static let placeHints: [(pattern: String, country: String)] = [
+        ("日本|\\bjapan\\b", "JP"), ("한국|대한민국|\\bkorea\\b", "KR"), ("台灣|臺灣|台湾|taiwan", "TW"),
+        ("香港|hong\\s*kong", "HK"), ("\\bchile\\b", "CL"), ("méxico|mejico|\\bmexico\\b", "MX"),
+        ("\\bbrasil\\b|\\bbrazil\\b", "BR"), ("españa|\\bspain\\b", "ES"), ("\\bportugal\\b", "PT"),
+        ("deutschland|\\bgermany\\b", "DE"), ("\\bfrance\\b|français", "FR"), ("\\bitalia\\b|\\bitaly\\b", "IT"),
+        ("\\bpolska\\b|\\bpoland\\b", "PL"), ("\\bnorge\\b|\\bnorway\\b", "NO"), ("\\bsverige\\b", "SE"),
+        ("\\bdanmark\\b", "DK"), ("\\bsuomi\\b", "FI"), ("türkiye|\\bturkey\\b", "TR"),
+        ("\\bcanada\\b", "CA"), ("\\baustralia\\b", "AU"), ("new zealand", "NZ"),
+        ("\\bargentina\\b", "AR"), ("\\bperú\\b|\\bperu\\b", "PE"), ("\\bcolombia\\b", "CO"),
+        ("philippines|pilipinas", "PH"), ("việt nam|vietnam", "VN"), ("ประเทศไทย|thailand", "TH"),
+        ("\\bindonesia\\b", "ID"), ("भारत|\\bindia\\b", "IN"), ("singapore|新加坡", "SG"),
+        ("\\bdubai\\b|emirates|الإمارات", "AE"), ("south africa", "ZA"), ("nederland|holland|netherlands", "NL"),
+        ("ελλάδα|\\bgreece\\b", "GR"), ("ישראל|\\bisrael\\b", "IL"), ("schweiz|suisse|switzerland", "CH"),
+        ("österreich|\\baustria\\b", "AT"), ("românia|\\bromania\\b", "RO"), ("magyar|\\bhungary\\b", "HU"),
+        ("\\bmalta\\b", "MT"), ("\\bguam\\b", "GU"), ("\\bhawaii\\b", "US"),
+        ("new york|nyc|chicago|miami|seattle|houston|boston|texas|california", "US"),
+        ("\\blondon\\b|manchester|bradford", "GB"), ("\\bparis\\b", "FR"), ("berlin|munich|münchen|hamburg", "DE"),
+        ("\\btokyo\\b|osaka|kyoto|sapporo|hokkaido", "JP"), ("\\btaipei\\b", "TW"), ("\\bseoul\\b|busan", "KR"),
+        ("москва|\\bmoscow\\b", "RU"), ("istanbul", "TR"), ("riyadh|jeddah", "SA"),
+    ]
+
+    /// 国家线索二：文字系统（只映射"单一主导"的，勉强算"大致"）。
+    ///
+    /// **必须用显式码点区间，不能用 `\p{Hiragana}` 这类脚本名**——实测（2026-10-14）ICU 的
+    /// `\p{Script}` 是按 **Script_Extensions** 匹配的：`【 U+3010`、`】`、`、U+3001`、
+    /// `・U+30FB`、`ー U+30FC` 这些中日韩共用标点会**同时**命中 Han / Hiragana / Katakana /
+    /// Hangul。后果是**任何带【】的中文标题都被第一条"kana → 日本"判成日语**（实测一次 3 条台湾
+    /// 机位中招）。区间只取真正的字母，把共用标点排除在外。
+    static let scriptHints: [(pattern: String, country: String)] = [
+        // 平假名 + 片假名（含半角片假名）。排除 U+30FB ・ 与 U+30FC ー（中日韩共用）。
+        ("[\\u3041-\\u309F\\u30A1-\\u30FA\\u30FD\\u30FE\\uFF66-\\uFF9D]", "JP"),
+        // 谚文音节 + 字母 + 兼容字母
+        ("[\\uAC00-\\uD7A3\\u1100-\\u11FF\\u3130-\\u318F]", "KR"),
+        // 汉字（基本区 + 扩展 A + 兼容区）
+        ("[\\u4E00-\\u9FFF\\u3400-\\u4DBF\\uF900-\\uFAFF]", "TW"),
+        ("[\\u0400-\\u04FF\\u0500-\\u052F]", "RU"),
+        ("[\\u0E00-\\u0E7F]", "TH"),
+        ("[\\u0590-\\u05FF]", "IL"),
+        ("[\\u0370-\\u03FF\\u1F00-\\u1FFF]", "GR"),
+        ("[\\u0900-\\u097F]", "IN"),
+    ]
+
+    /// 国家线索三：找不到任何线索时，按"发现它的那条关键词"所属语区兜底——只认主导性强的，
+    /// 别的一律丢弃（用户口径：预测大致分一下**或丢弃**）。
+    static let queryHints: [String: String] = [
+        "ライブカメラ": "JP", "即時影像": "TW", "라이브카메라": "KR",
+        "câmera ao vivo": "BR", "онлайн камера": "RU",
+    ]
+
+    static func matches(_ pattern: String, _ haystack: String) -> Bool {
+        haystack.range(of: pattern, options: [.regularExpression, .caseInsensitive]) != nil
+    }
+
+    static func verdict(for candidate: Candidate) -> AutoVerdict {
+        let hay = "\(candidate.title) \(candidate.channelTitle)"
+
+        for rule in banned where matches(rule.pattern, hay) {
+            return AutoVerdict(keep: false, reason: rule.reason, country: nil, countrySource: nil)
+        }
+        if !matches(cameraLike, hay) {
+            for rule in softBanned where matches(rule.pattern, hay) {
+                return AutoVerdict(keep: false, reason: rule.reason, country: nil, countrySource: nil)
+            }
+        }
+
+        // 频道自报的国家优先；没自报才猜。
+        if let country = candidate.channelCountry, !country.isEmpty {
+            return AutoVerdict(keep: true, reason: nil, country: nil, countrySource: nil)
+        }
+        for hint in placeHints where matches(hint.pattern, hay) {
+            return AutoVerdict(keep: true, reason: nil, country: hint.country, countrySource: "place:\(hint.pattern.prefix(24))")
+        }
+        for hint in scriptHints where matches(hint.pattern, hay) {
+            return AutoVerdict(keep: true, reason: nil, country: hint.country, countrySource: "script:\(hint.country)")
+        }
+        if let country = queryHints[candidate.query] {
+            return AutoVerdict(keep: true, reason: nil, country: country, countrySource: "query:\(candidate.query)")
+        }
+        return AutoVerdict(
+            keep: false,
+            reason: "国家无法判定（没有地名/文字系统线索，也不属于主导语区）",
+            country: nil,
+            countrySource: nil
+        )
+    }
 }
 
 // MARK: - curate
@@ -1199,6 +1472,86 @@ func curate() async throws {
 
     print("\n保留 \(kept.count) 条（其中 \(curation.country.count) 条国家由人工更正/补全）")
     printGrouped(kept)
+}
+
+// MARK: - autocurate
+
+/// 自动筛选一遍候选池：剔掉不是机位的、给缺国家的猜一个国家，再走 `curate` + `promote`。
+///
+/// **用户口径（2026-10-14）：不再人工筛选**，所以写 `curation.json` 的执行者从人换成了
+/// `AutoFilter` 的规则。`--dry-run` 只打印判定不落盘——规则是新的，第一次跑要先看一眼它判了什么。
+/// 全程 **0 units**（只读本地文件）。
+func autocurate(dryRun: Bool) async throws {
+    let file: CandidateFile = try read("candidates.json")
+    let curation: Curation = try read("curation.json")
+    let seeds: [Seed] = try read("channels-source.json")
+    let inCatalog = Set(seeds.map(\.channelId))
+
+    var drop: [(channelID: String, reason: String, name: String)] = []
+    var guessed: [(channelID: String, country: String, source: String, name: String)] = []
+    var kept = 0
+    var skipped = 0
+
+    for candidate in file.candidates {
+        // 已排除的、已进目录的都不再动：前者是上一轮的结论，后者是被接受的事实——
+        // 规则不该有权力把已经在服务用户的条目拿掉。
+        if curation.exclude[candidate.channelId] != nil || inCatalog.contains(candidate.channelId) {
+            skipped += 1
+            continue
+        }
+
+        let verdict = AutoFilter.verdict(for: candidate)
+        guard verdict.keep else {
+            drop.append((candidate.channelId, verdict.reason ?? "未分类", candidate.channelTitle))
+            continue
+        }
+        kept += 1
+        if let country = verdict.country {
+            guessed.append((candidate.channelId, country, verdict.countrySource ?? "?", candidate.channelTitle))
+        }
+    }
+
+    let judged = kept + drop.count
+    let byReason = Dictionary(grouping: drop, by: \.reason).mapValues(\.count).sorted { $0.value > $1.value }
+    let byCountry = Dictionary(grouping: guessed, by: \.country).mapValues(\.count).sorted { $0.value > $1.value }
+    let bySource = Dictionary(grouping: guessed, by: \.source).mapValues(\.count).sorted { $0.value > $1.value }
+
+    print("候选池 \(file.candidates.count) 条：已在目录 \(inCatalog.count)、已排除但又被挖回来的 \(skipped)（这两批跳过），本轮判定 \(judged) 条")
+    print("→ 保留 \(kept) 条（其中 \(guessed.count) 条缺国家、猜到了国家），剔除 \(drop.count) 条\n")
+
+    print("剔除原因：")
+    for entry in byReason { print("  \(entry.value) 条  \(entry.key)") }
+    print("\n猜到的国家：" + byCountry.map { "\($0.key):\($0.value)" }.joined(separator: "  "))
+    print("猜国家的依据：" + bySource.map { "\($0.key) ×\($0.value)" }.joined(separator: "；"))
+
+    if !drop.isEmpty {
+        print("\n剔除明细：")
+        for entry in drop { print("  \(entry.reason)  —— \(entry.name)") }
+    }
+    if !guessed.isEmpty {
+        print("\n猜国家明细：")
+        for entry in guessed { print("  \(entry.country)   \(entry.source)  —— \(entry.name)") }
+    }
+
+    guard !dryRun else {
+        print("\n（--dry-run：没有写 curation.json）")
+        return
+    }
+    guard !drop.isEmpty || !guessed.isEmpty else {
+        print("\n没有要改的，curation.json 未动。")
+        return
+    }
+
+    if !drop.isEmpty {
+        try appendToCuration("exclude", entries: drop.map { ($0.channelID, "自动筛选（\($0.reason)）—— \($0.name)") })
+    }
+    if !guessed.isEmpty {
+        try appendToCuration("country", entries: guessed.map { ($0.channelID, $0.country) })
+    }
+
+    print("\n已写进 curation.json（exclude +\(drop.count)、country +\(guessed.count)），接着重跑 curate + promote…\n")
+    try await curate()
+    try promote()
 }
 
 // MARK: - prune
@@ -1255,34 +1608,33 @@ func prune(misses: Int?, dryRun: Bool) async throws {
     try promote()
 }
 
-/// 往 `curation.json` 的 `exclude` 里追加条目。
+/// 往 `curation.json` 的某个块里追加条目。
 ///
 /// 那个文件是**人维护的**：分组空行与条目顺序都是可读性的一部分，用 `JSONEncoder` 整个重写会把
 /// 它们一起抹掉。所以这里做的是文本插入，而且**先验证结果能解析再落盘**——锚点找不到、或者拼出来
 /// 的 JSON 读不回来，就直接报错，绝不在一个不确定的文本上乱改。
-func appendExclusions(_ entries: [(channelID: String, reason: String)]) throws {
+///
+/// 锚点：块名之后**第一个** `\n  }`（两空格缩进的收尾花括号）就是那个块的结尾——两个块
+/// （`exclude` / `country`）的收尾都是这个形状，不需要区分带不带逗号。
+func appendToCuration(_ block: String, entries: [(key: String, value: String)]) throws {
     let url = repoRoot().appending(path: "curation.json")
     let text = try String(contentsOf: url, encoding: .utf8)
 
-    guard let excludeStart = text.range(of: "\"exclude\"") else {
-        throw ServiceError.input("curation.json 里找不到 exclude 块")
+    guard let start = text.range(of: "\"\(block)\"") else {
+        throw ServiceError.input("curation.json 里找不到 \(block) 块")
     }
 
-    // exclude 块之后最后一个 `\n  },` 就是它的收尾（country 是最后一个块，收尾不带逗号）。
-    let tail = text[excludeStart.upperBound...]
-    guard let closing = tail.range(of: "\n  },", options: .backwards) else {
-        throw ServiceError.input("curation.json 的 exclude 块找不到收尾，格式变了？")
+    let tail = text[start.upperBound...]
+    guard let closing = tail.range(of: "\n  }") else {
+        throw ServiceError.input("curation.json 的 \(block) 块找不到收尾，格式变了？")
     }
 
     let head = String(text[text.startIndex..<closing.lowerBound])
     let rest = String(text[closing.lowerBound...])
 
-    let body = head.hasSuffix(",") || head.trimmingCharacters(in: .whitespacesAndNewlines).hasSuffix(",")
-        ? head
-        : head + ","
-    let lines = entries.map { "    \(quoted($0.channelID)): \(quoted($0.reason))" }
-    let block = "\n\n" + lines.joined(separator: ",\n")
-    let merged = body + block + (rest.hasPrefix("\n") ? rest : "\n" + rest)
+    let body = head.trimmingCharacters(in: .whitespacesAndNewlines).hasSuffix(",") ? head : head + ","
+    let lines = entries.map { "    \(quoted($0.key)): \(quoted($0.value))" }
+    let merged = body + "\n\n" + lines.joined(separator: ",\n") + rest
 
     // 落盘前先确认它仍是一份能解的 curation.json。
     guard let data = merged.data(using: .utf8), (try? JSONDecoder().decode(Curation.self, from: data)) != nil else {
@@ -1290,6 +1642,10 @@ func appendExclusions(_ entries: [(channelID: String, reason: String)]) throws {
     }
 
     try data.write(to: url)
+}
+
+func appendExclusions(_ entries: [(channelID: String, reason: String)]) throws {
+    try appendToCuration("exclude", entries: entries.map { ($0.channelID, $0.reason) })
 }
 
 /// JSON 字符串字面量（条目里带引号或反斜杠时不能直接把文本塞进去）。
@@ -1462,6 +1818,9 @@ guard let command = arguments.first, !command.hasPrefix("--") else {
       enrich  补频道国家与卡片静帧（1 unit / 50 个频道）。
       curate  应用人工筛选，不花配额、可重复跑。
       promote 生成 channels-source.json，不花配额。
+      autocurate [--dry-run]
+              自动筛选：按 AutoFilter 的规则剔掉不是机位的候选、给缺国家的按语言/地名猜一个，
+              再走 curate + promote。0 units。（用户口径：不再人工筛选）
       prune   [--misses N] [--dry-run]
               应用清理账本：把**连续**拿不到可播的流的频道从目录里删掉（写进 curation.json 的
               exclude，再跑 curate + promote）。阈值分级，见 PrunePolicy。0 units。
@@ -1485,6 +1844,8 @@ do {
         try await enrich()
     case "curate":
         try await curate()
+    case "autocurate":
+        try await autocurate(dryRun: arguments.contains("--dry-run"))
     case "promote":
         try promote()
     case "prune":

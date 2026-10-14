@@ -1,27 +1,6 @@
 {
   "candidates" : [
     {
-      "category" : "scenery",
-      "channelCountry" : "GB",
-      "channelId" : "UCkQef3Fidr7tm3gNuXgGKPw",
-      "channelTitle" : "BIG JET TV",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/uDBYuEV4zjI/maxresdefault_live.jpg",
-      "title" : "Heathrow Airport LIVE 24/7",
-      "videoId" : "uDBYuEV4zjI",
-      "viewers" : 599
-    },
-    {
-      "category" : "scenery",
-      "channelId" : "UCNMulUCdUibAMPnaR1e0kEw",
-      "channelTitle" : "FalconCam Project",
-      "query" : "cámara en vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/gnF7_gRHHMQ/sddefault_live.jpg",
-      "title" : "Box Camera - FalconCam Project LIVE",
-      "videoId" : "gnF7_gRHHMQ",
-      "viewers" : 395
-    },
-    {
       "category" : "nature",
       "channelCountry" : "US",
       "channelId" : "UCeXH8GZyV3sVqAr45AvupOA",
@@ -35,61 +14,6 @@
     {
       "category" : "scenery",
       "channelCountry" : "JP",
-      "channelId" : "UCH1R8j9ReS3GSV3wi58Xu1A",
-      "channelTitle" : "Love Flight Jack",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/7p8lCfQCRLs/maxresdefault_live.jpg",
-      "title" : "🔴LIVE at Centrair Airport Plane Spotting　2026.10.14 セントレア空港ライブカメラ セントレア空港　NGO/RJGG",
-      "videoId" : "7p8lCfQCRLs",
-      "viewers" : 309
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "TW",
-      "channelId" : "UCp2f7tGJGN6R9Muxipem8Nw",
-      "channelTitle" : "寰宇新聞 頻道",
-      "query" : "即時影像",
-      "thumbnail" : "https://i.ytimg.com/vi/w87VGpgd90U/maxresdefault_live.jpg",
-      "title" : "寰宇新聞台灣台 24小時直播｜TaiwanNewsTV 24h live news｜ 台湾のニュース24時間ライブ配信中  @globalnewstw",
-      "videoId" : "w87VGpgd90U",
-      "viewers" : 284
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UC_lRCs4pOVJl2Sv_Y4_Qsaw",
-      "channelTitle" : "Live Jet",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/bV2dxuOnlSc/maxresdefault_live.jpg",
-      "title" : "- LIVE - 羽田空港  ライブカメラ 2026/10/14 TOKYO HANEDA International Airport HND Plane Spotting",
-      "videoId" : "bV2dxuOnlSc",
-      "viewers" : 226
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCP391YRAjSOdM_bwievgaZA",
-      "channelTitle" : "Jovem Pan News",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/eTz4XgOQaAE/maxresdefault_live.jpg",
-      "title" : "Jovem Pan News Av. Paulista",
-      "videoId" : "eTz4XgOQaAE",
-      "viewers" : 144
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UCzsSKT7ckGdgyJ2_2wf2fyw",
-      "channelTitle" : "にゃんたまチャンネル♪",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/FMGBBjFh6_w/maxresdefault_live.jpg",
-      "title" : "看板猫おもち部屋・猫が暮らす癒しの温泉旅館ライブ配信中  Cat Live Stream H.VIEW cam",
-      "videoId" : "FMGBBjFh6_w",
-      "viewers" : 97
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
       "channelId" : "UCYcexkyqYKH9oWzprRGsW0A",
       "channelTitle" : "ふもとっぱらチャンネル",
       "query" : "ライブカメラ",
@@ -97,16 +21,6 @@
       "title" : "富士山ライブ配信 ふもとっぱらキャンプサイトから - Mount Fuji Live from Fumotoppara (Shizuoka Japan)",
       "videoId" : "gxcQJ8pJF0c",
       "viewers" : 85
-    },
-    {
-      "category" : "scenery",
-      "channelId" : "UCpYQmszu4IP37xyt3RQb2gw",
-      "channelTitle" : "More Max Velocity",
-      "query" : "kamera live",
-      "thumbnail" : "https://i.ytimg.com/vi/zh6abS0CQ5s/maxresdefault_live.jpg",
-      "title" : "🔴 LIVE 24/7 Severe Weather Coverage  - Live Storm Chasers And Tornado Warnings",
-      "videoId" : "zh6abS0CQ5s",
-      "viewers" : 82
     },
     {
       "category" : "cityscape",
@@ -143,17 +57,6 @@
     },
     {
       "category" : "scenery",
-      "channelCountry" : "PT",
-      "channelId" : "UC0R-K3crhMX9jzswbmfIORw",
-      "channelTitle" : "AVIAÇÃO TV",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/U1oUZPayw8A/maxresdefault_live.jpg",
-      "title" : "🔴 LIVE 24/7 Lisbon Airport Live Cam 13.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "videoId" : "U1oUZPayw8A",
-      "viewers" : 52
-    },
-    {
-      "category" : "scenery",
       "channelCountry" : "JP",
       "channelId" : "UCk2oG--VyYST4SYyQkeadjA",
       "channelTitle" : "UTYテレビ山梨公式チャンネル",
@@ -162,17 +65,6 @@
       "title" : "【上野原ライブカメラ】中央自動車道 上野原インターチェンジ 提供:UTYテレビ山梨",
       "videoId" : "0ZWLeCUwSOU",
       "viewers" : 52
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCNZCKDhAVtbh7sddChTxI7w",
-      "channelTitle" : "SBGR LIVE",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/G2l7Xq9YkF8/maxresdefault_live.jpg",
-      "title" : "SBGR LIVE 4K - Aeroporto Internacional de Guarulhos AO VIVO - GRU Airport",
-      "videoId" : "G2l7Xq9YkF8",
-      "viewers" : 49
     },
     {
       "category" : "cityscape",
@@ -188,16 +80,6 @@
     {
       "category" : "scenery",
       "channelCountry" : "JP",
-      "channelId" : "UCZ974tQkAeV7_l_opPHCcdg",
-      "channelTitle" : "The Dramatic 中央本線。",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/-o-0x1vgU78/maxresdefault_live.jpg",
-      "title" : "JR 中央本線ライブカメラ③（春日居町 ⇔ 石和温泉）熊野権現踏切【10月】",
-      "videoId" : "-o-0x1vgU78",
-      "viewers" : 42
-    },
-    {
-      "category" : "scenery",
       "channelId" : "UChKERpE7Um0Uq1btm_a9g5A",
       "channelTitle" : "Kabukicho Live Camera",
       "query" : "ライブカメラ",
@@ -219,7 +101,7 @@
     },
     {
       "category" : "beach",
-      "channelCountry" : "DE",
+      "channelCountry" : "BR",
       "channelId" : "UChWGYkK0I8U83C0FxAxWy4w",
       "channelTitle" : "Homes in Rio",
       "query" : "beach live cam",
@@ -231,27 +113,6 @@
     {
       "category" : "scenery",
       "channelCountry" : "JP",
-      "channelId" : "UCynX4LJTQ_H7_KPy7QiIS2A",
-      "channelTitle" : "HAKODATE LIVE CAMERA",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/KW5k83FbUkM/maxresdefault_live.jpg",
-      "title" : "【Live-Japan】函館駅前ライブカメラ② ※20秒ごとにアングルが変わります #JR函館駅 #函館 #路面電車 #HAKODATE",
-      "videoId" : "KW5k83FbUkM",
-      "viewers" : 33
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UCSWOnDD1KIriGmyQ7SgNA4A",
-      "channelTitle" : "HTB北海道ニュース",
-      "query" : "即時影像",
-      "thumbnail" : "https://i.ytimg.com/vi/tvgbZZYS4Nk/sddefault_live.jpg",
-      "title" : "【北海道ニュース24〜HTBニュースLIVE】北海道で起きた事件や事故、災害などを24時間配信中！",
-      "videoId" : "tvgbZZYS4Nk",
-      "viewers" : 33
-    },
-    {
-      "category" : "scenery",
       "channelId" : "UCX_R406XLWxbklNREtJx3Kw",
       "channelTitle" : "宮城県仙台市青葉区八幡ライブカメラ",
       "query" : "ライブカメラ",
@@ -259,28 +120,6 @@
       "title" : "宮城県仙台市青葉区八幡ライブカメラ",
       "videoId" : "BrONiQPFZzo",
       "viewers" : 32
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "HK",
-      "channelId" : "UCHB8-XbfawI0QsLTryrRnUA",
-      "channelTitle" : "Live 3D Airport ATC + WX",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/8fHrDSqHy54/maxresdefault_live.jpg",
-      "title" : "ライブ3Dカメラ東京羽田空港 3D LIVE Tokyo Haneda Airport (RJTT)ATC + WX",
-      "videoId" : "8fHrDSqHy54",
-      "viewers" : 32
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UC9yuSASu1r3dKOvEmZwnptQ",
-      "channelTitle" : "こだまらいふ Kodama life / Shinkansen Japan bullet train",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/1lmcgLo6uT8/maxresdefault_live.jpg",
-      "title" : "🔴Live東海道新幹線小田原駅ライブカメラ/Shinkansen Odawara Station Live Camera/Bullet train",
-      "videoId" : "1lmcgLo6uT8",
-      "viewers" : 30
     },
     {
       "category" : "cityscape",
@@ -405,6 +244,7 @@
     },
     {
       "category" : "scenery",
+      "channelCountry" : "JP",
       "channelId" : "UC_RgXISXHXYaW0WLiGHRMPw",
       "channelTitle" : "十勝岳ライブカメラ",
       "query" : "ライブカメラ",
@@ -448,28 +288,6 @@
     },
     {
       "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UC_HECWbVL0AlSkMgGu4JcsA",
-      "channelTitle" : "Resenha do Natanzin",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/a_DaJn4M_Us/maxresdefault_live.jpg",
-      "title" : "A FAZENDA 18 AO VIVO AGORA COM IMAGENS",
-      "videoId" : "a_DaJn4M_Us",
-      "viewers" : 19
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UC3XaMdKWwInRZABct7gKwFA",
-      "channelTitle" : "TTSC CH",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/6lVanyXsybI/maxresdefault_live.jpg",
-      "title" : "【LIVE】JR 中央線 高尾駅 周辺 ライブカメラ / 4K LIVE TOKYO JAPAN",
-      "videoId" : "6lVanyXsybI",
-      "viewers" : 18
-    },
-    {
-      "category" : "scenery",
       "channelCountry" : "JP",
       "channelId" : "UCRZplV8vE67bgCI6_3sm3mQ",
       "channelTitle" : "たぬきやLIVE",
@@ -482,38 +300,6 @@
     {
       "category" : "scenery",
       "channelCountry" : "JP",
-      "channelId" : "UCDyC7xeQxsihyZj8SoICLEw",
-      "channelTitle" : "鉄道ファンの待合室",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/1idrTT5B7iY/maxresdefault_live.jpg",
-      "title" : "【LIVE】東京日暮里 鉄道ライブカメラ 2026-10-14 15:00- Nippori,Tokyo,Japan railcam",
-      "videoId" : "1idrTT5B7iY",
-      "viewers" : 16
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UCE5uxiZBrhwFPwzlSfmdWQA",
-      "channelTitle" : "Tokyo Akabane Live Camera",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/cH7ZdGV4wnc/maxresdefault_live.jpg",
-      "title" : "🚅[LIVE]鉄道ライブカメラ(東京 赤羽駅周辺) Tokyo Japan Train Live Camera",
-      "videoId" : "cH7ZdGV4wnc",
-      "viewers" : 16
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCTnBWNFSvL4HexHuflGGF_Q",
-      "channelTitle" : "RAILFAN ZBM ZHO",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/ymaDV086Q-U/maxresdefault_live.jpg",
-      "title" : "Trem ao Vivo Embú Guaçú SP Brasil",
-      "videoId" : "ymaDV086Q-U",
-      "viewers" : 16
-    },
-    {
-      "category" : "scenery",
       "channelId" : "UCrGS8VyrgCqYwaogH5bQpxQ",
       "channelTitle" : "Cerevo live camera",
       "query" : "ライブカメラ",
@@ -521,28 +307,6 @@
       "title" : "秋葉原ライブカメラ Akihabara live camera YouTube Live version",
       "videoId" : "gvahdBknpc0",
       "viewers" : 16
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UC2nzv_yI8NPXVLwWU_psgxQ",
-      "channelTitle" : "吉塚ライブカメラ",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/sUHJcgP9XKQ/maxresdefault_live.jpg",
-      "title" : "【LIVE】静岡駅ライブカメラ　東海道新幹線・東海道本線　JAPAN Shinkansen LIVE Camera",
-      "videoId" : "sUHJcgP9XKQ",
-      "viewers" : 16
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UC2N9PwuXEQVO9EwNafehm0g",
-      "channelTitle" : "dakeのハムスター",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/5TRID8WTJJQ/maxresdefault_live.jpg",
-      "title" : "【LIVE】多頭飼いロボロフスキーハムスター 24Hライブカメラ生配信　Robo house",
-      "videoId" : "5TRID8WTJJQ",
-      "viewers" : 15
     },
     {
       "category" : "scenery",
@@ -598,49 +362,6 @@
       "title" : "🔴 Santos ao vivo | Janela Gonzaga  e Canal 2  Ao vivo Santos - clima Santos -  #climaSantos",
       "videoId" : "1I0G3d-obsc",
       "viewers" : 14
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UCAPMlxH-TQVQNzKgD9V_JEw",
-      "channelTitle" : "うめたくん",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/TpU9fLrT1ac/sddefault_live.jpg",
-      "title" : "【2026/10/14 水曜日】西武線ライブカメラ　西武池袋線保谷駅付近の踏切からライブ配信  #ライブカメラ",
-      "videoId" : "TpU9fLrT1ac",
-      "viewers" : 14
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UCAzaZfwgfjYVRGn4S60xM6Q",
-      "channelTitle" : "TSCテレビせとうち",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/ixXHFjpNG8E/maxresdefault_live.jpg",
-      "title" : "【LIVE】 岡山桃太郎空港　岡山市",
-      "videoId" : "ixXHFjpNG8E",
-      "viewers" : 13
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UCRruWUK0POjg2veibHucffQ",
-      "channelTitle" : "大阪環状線ライブカメラ",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/G4r5qRgxwRk/maxresdefault_live.jpg",
-      "title" : "【LIVE】大阪環状線・梅田貨物線ライブカメラ 2026/10/14 05:00～ Osaka, JAPAN | Train Camera",
-      "videoId" : "G4r5qRgxwRk",
-      "viewers" : 13
-    },
-    {
-      "category" : "scenery",
-      "channelId" : "UCYR27i2wj9PgsR9fYkpkFFw",
-      "channelTitle" : "東京都新橋駅新幹線ライブカメラ",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/AX4J_OsdSeI/maxresdefault_live.jpg",
-      "title" : "東京都新橋駅新幹線ライブカメラ",
-      "videoId" : "AX4J_OsdSeI",
-      "viewers" : 13
     },
     {
       "category" : "scenery",
@@ -732,17 +453,6 @@
     },
     {
       "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UClvnUy2FNZIKAUTf6aA1IFA",
-      "channelTitle" : "TRAINS LIVE BRASIL",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/iv_pnlX_td4/maxresdefault_live.jpg",
-      "title" : " TATUAPÉ SP AO VIVO/ Trens,Trânsito e Mobilidade Urbana",
-      "videoId" : "iv_pnlX_td4",
-      "viewers" : 10
-    },
-    {
-      "category" : "scenery",
       "channelCountry" : "ES",
       "channelId" : "UC7ekPkSzne_PsGbRJP0nkeg",
       "channelTitle" : "WEBCAMS ONLINE",
@@ -765,39 +475,6 @@
     },
     {
       "category" : "scenery",
-      "channelCountry" : "TW",
-      "channelId" : "UC5an2J74W5FA_9Z6ere7fPA",
-      "channelTitle" : "松柏嶺受天宮",
-      "query" : "即時影像",
-      "thumbnail" : "https://i.ytimg.com/vi/Nn5J2rQ2WeY/maxresdefault_live.jpg",
-      "title" : "【LIVE】松柏嶺受天宮│即時影像│LIVE CAMERA│ライブカメラ│臺灣玄天上帝進香中心│TAIWAN",
-      "videoId" : "Nn5J2rQ2WeY",
-      "viewers" : 9
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UCzUBGkAIml9WKr4_I1lCrAg",
-      "channelTitle" : "もふもふペットCafe",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/RDafsvoo83Q/maxresdefault_live.jpg",
-      "title" : "チンチラ部屋配信 Chinchilla room live  🐭【ライブカメラ】",
-      "videoId" : "RDafsvoo83Q",
-      "viewers" : 9
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCbpmfj2g2tYuBezI2kEDhsg",
-      "channelTitle" : "Golf Oscar Romeo® Aviação",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/KFdqfQwJ9is/maxresdefault_live.jpg",
-      "title" : "AEROPORTO DE CONGONHAS AO VIVO – Câmera #2 – 14/10/26 CGH/SBSP | 00h–12h",
-      "videoId" : "KFdqfQwJ9is",
-      "viewers" : 9
-    },
-    {
-      "category" : "scenery",
       "channelCountry" : "BR",
       "channelId" : "UCi1vQx48j_nfrMg6XH5PItQ",
       "channelTitle" : "CLIMA BC Brazil",
@@ -805,17 +482,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/2hgqG86js-4/maxresdefault_live.jpg",
       "title" : "Balneário Camboriú ao vivo - CENTRAL",
       "videoId" : "2hgqG86js-4",
-      "viewers" : 9
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "HU",
-      "channelId" : "UCU31-9qcY1RDuMad67dbuhw",
-      "channelTitle" : "Madarles - Live Bird Cams",
-      "query" : "kamera live",
-      "thumbnail" : "https://i.ytimg.com/vi/6wpQeDhYtqg/maxresdefault_live.jpg",
-      "title" : "LIVE Wildlife &amp; Bird of Prey Cam #1 (Tamási, Hungary)",
-      "videoId" : "6wpQeDhYtqg",
       "viewers" : 9
     },
     {
@@ -828,17 +494,6 @@
       "title" : "London Bridge / River Thames Live Webcam @ The Golden Hinde (4K)",
       "videoId" : "znmUEZUM9Zc",
       "viewers" : 9
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "HK",
-      "channelId" : "UCNcY1o1xGgTX_19w0cXes9g",
-      "channelTitle" : "HK360VR",
-      "query" : "webcam en direct",
-      "thumbnail" : "https://i.ytimg.com/vi/DMEHBuEixY0/maxresdefault_live.jpg",
-      "title" : "🔴【LIVE】 Hong Kong&#39;s ONLY 24/7 LIVE camera from The Peak with Relaxing Music BGM 24/7 實景直播 抒情背景音樂🎧",
-      "videoId" : "DMEHBuEixY0",
-      "viewers" : 8
     },
     {
       "category" : "scenic",
@@ -896,17 +551,6 @@
       "viewers" : 7
     },
     {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCzwTW6vgC7RcmxssUrGZnwA",
-      "channelTitle" : "Portal Chapecó",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/T1UAUCuDGV8/maxresdefault_live.jpg",
-      "title" : "Aeroporto de Chapecó AO VIVO - SBCH XAP Live - Tráfego aéreo em tempo real com fonia #chapeco",
-      "videoId" : "T1UAUCuDGV8",
-      "viewers" : 7
-    },
-    {
       "category" : "beach",
       "channelCountry" : "US",
       "channelId" : "UC029bcZGqxOsRkvWrZLhgKQ",
@@ -930,23 +574,13 @@
     },
     {
       "category" : "scenery",
+      "channelCountry" : "JP",
       "channelId" : "UCEDn0tLxpVqEvI3NJyE2DRA",
       "channelTitle" : "波のスケッチ",
       "query" : "ライブカメラ",
       "thumbnail" : "https://i.ytimg.com/vi/yDiDqL2dJU8/maxresdefault_live.jpg",
       "title" : "海辺の風景　ライブカメラ波情報　南房総 鴨川シーサイド　癒しの海",
       "videoId" : "yDiDqL2dJU8",
-      "viewers" : 7
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "US",
-      "channelId" : "UCOisjwV-be83l7HsYkpJn1g",
-      "channelTitle" : "えどっ子!",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/HtCSOpJdxjg/maxresdefault_live.jpg",
-      "title" : "【㊗️鉄道の日】尾羽急電鉄ライブカメラその191 Obakyu Electric Railway Live Camera Part 191【参加型】",
-      "videoId" : "HtCSOpJdxjg",
       "viewers" : 7
     },
     {
@@ -991,28 +625,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/eeCcJjcZPw0/maxresdefault.jpg",
       "title" : "[2026-10-13 Sunset &amp; Night] LIVE Tokyo Bay | 都営バス 深川車庫 | Toei Bus Depot | 時刻表なし版 | 17:00-05:00 JST",
       "videoId" : "eeCcJjcZPw0",
-      "viewers" : 6
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCd41VC-Vs5qxALgG2qMUGWQ",
-      "channelTitle" : "Spotter SBPA Live",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/pMwPjXNiZeY/maxresdefault_live.jpg",
-      "title" : "SBPA - Câmera Aeroporto Internacional Salgado Filho POA",
-      "videoId" : "pMwPjXNiZeY",
-      "viewers" : 6
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "MX",
-      "channelId" : "UCUsm-fannqOY02PNN67C0KA",
-      "channelTitle" : "NMás",
-      "query" : "cámara en vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/nCwtd38bKDM/maxresdefault_live.jpg",
-      "title" : "EN VIVO: Huracán Simon se intensifica a categoría 2",
-      "videoId" : "nCwtd38bKDM",
       "viewers" : 6
     },
     {
@@ -1072,17 +684,6 @@
     },
     {
       "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UCwYeh4cu-0z0hFd3wwYgzeA",
-      "channelTitle" : "日光二荒山神社 ライブカメラ",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/augCXu3BkhM/maxresdefault_live.jpg",
-      "title" : "日光二荒山神社 神橋 ライブカメラ",
-      "videoId" : "augCXu3BkhM",
-      "viewers" : 5
-    },
-    {
-      "category" : "scenery",
       "channelCountry" : "CL",
       "channelId" : "UCQJzBVoVLCLe1G7tIxXDc6w",
       "channelTitle" : "La Serena Drone",
@@ -1101,17 +702,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/ts7cwjEbWHY/maxresdefault.jpg",
       "title" : "東京都御茶ノ水ライブカメラ Tokyo Ochanomizu Live camera. World cam.",
       "videoId" : "ts7cwjEbWHY",
-      "viewers" : 5
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UCIQmoWaeozFXv0W9vAlY-8g",
-      "channelTitle" : "阪急今津線 小林駅 Hankyu Imazu Line Obayashi Station",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/XSyhnxP7voY/maxresdefault_live.jpg",
-      "title" : "【鉄道ライブカメラ】阪急電車  阪急今津線 小林駅 Japan Train  Hankyu Imazu Line Obayashi Station　LIVE",
-      "videoId" : "XSyhnxP7voY",
       "viewers" : 5
     },
     {
@@ -1137,17 +727,6 @@
       "viewers" : 4
     },
     {
-      "category" : "scenery",
-      "channelCountry" : "US",
-      "channelId" : "UCcSP6N69MnMOY8ClNXE_d-A",
-      "channelTitle" : "FinalCures",
-      "query" : "livecam",
-      "thumbnail" : "https://i.ytimg.com/vi/c3MRw8TqVdU/maxresdefault_live.jpg",
-      "title" : "Meet The Bockers by Day - Possum Crew by Night #possum #livecam #possumcam #livestream #chickencoop",
-      "videoId" : "c3MRw8TqVdU",
-      "viewers" : 4
-    },
-    {
       "category" : "cityscape",
       "channelCountry" : "US",
       "channelId" : "UCuGJHbJLvVW2JqKNzhBSu6g",
@@ -1159,30 +738,8 @@
       "viewers" : 4
     },
     {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UCxIpV9LINmpGETQwS3nKOYQ",
-      "channelTitle" : "阪急神戸線 武庫之荘駅 鉄道ライブカメラ",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/ipr2fF4rI0o/maxresdefault_live.jpg",
-      "title" : "【2026/10/14 (水) 4:30～16:25】鉄道ライブカメラ 阪急神戸線 武庫之荘駅 Hankyu Kobe Line Live Camera",
-      "videoId" : "ipr2fF4rI0o",
-      "viewers" : 4
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "RU",
-      "channelId" : "UCBNXKrniCm4Qd9v5tTzY-aA",
-      "channelTitle" : "Капуки Кануки",
-      "query" : "онлайн камера",
-      "thumbnail" : "https://i.ytimg.com/vi/qRb3QH-kqrc/maxresdefault_live.jpg",
-      "title" : "Машинки и зайчик Лаки 🔴 Маша Капуки Кануки онлайн | Видео для детей",
-      "videoId" : "qRb3QH-kqrc",
-      "viewers" : 4
-    },
-    {
       "category" : "nature",
-      "channelCountry" : "CA",
+      "channelCountry" : "ID",
       "channelId" : "UCaG0IHN1RMOZ4-U3wDXAkwA",
       "channelTitle" : "afarTV",
       "query" : "volcano live cam",
@@ -1203,17 +760,6 @@
       "viewers" : 4
     },
     {
-      "category" : "scenery",
-      "channelCountry" : "CA",
-      "channelId" : "UCmM8fJ5uDl8pqu8nnd8Ixlg",
-      "channelTitle" : "Moore Equipment Ltd.",
-      "query" : "webcam en direct",
-      "thumbnail" : "https://i.ytimg.com/vi/TPpuWYRjU1k/maxresdefault_live.jpg",
-      "title" : "LIVE Montreal Trudeau Airport CYUL 24/7 Webcam Runway 24R",
-      "videoId" : "TPpuWYRjU1k",
-      "viewers" : 4
-    },
-    {
       "category" : "beach",
       "channelCountry" : "US",
       "channelId" : "UCpb8WxAsZPIwaAsNbbKLzmg",
@@ -1222,28 +768,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/2WmTS_bBwyM/maxresdefault_live.jpg",
       "title" : "Atlantic City Live Cams - 24/7 Boardwalk, Marina &amp; Lighthouse Views",
       "videoId" : "2WmTS_bBwyM",
-      "viewers" : 4
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "US",
-      "channelId" : "UC-bPJdfIq5zqIP_PQ7rUJaA",
-      "channelTitle" : "Railstream",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/oKwiQBAkEVU/maxresdefault_live.jpg",
-      "title" : "LIVE Rail Cam – Fullerton, California | BNSF Mainline + Amtrak + Metrolink | RailStream",
-      "videoId" : "oKwiQBAkEVU",
-      "viewers" : 4
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BA",
-      "channelId" : "UCpzi8BbsXCUoSlfbTBDMRKA",
-      "channelTitle" : "Medjugorje Today Live",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/5OyvUtSPGaQ/maxresdefault_live.jpg",
-      "title" : "Medjugorje LIVE Stream  24/7 CAM - Apparition Hill FullHD",
-      "videoId" : "5OyvUtSPGaQ",
       "viewers" : 4
     },
     {
@@ -1281,6 +805,7 @@
     },
     {
       "category" : "scenery",
+      "channelCountry" : "MX",
       "channelId" : "UCZ8JAbEUIAzuEg52lT6SmbA",
       "channelTitle" : "Webcams de México TV / Canal 9",
       "query" : "cámara en vivo",
@@ -1324,6 +849,7 @@
     },
     {
       "category" : "scenery",
+      "channelCountry" : "JP",
       "channelId" : "UC7goiCiuQAGcDCjsajq50wQ",
       "channelTitle" : "札幌もいわ山ロープウェイ【公式-2】",
       "query" : "라이브카메라",
@@ -1356,7 +882,7 @@
     },
     {
       "category" : "beach",
-      "channelCountry" : "US",
+      "channelCountry" : "TH",
       "channelId" : "UC_cmEauzsnJ4trDXLiIug1Q",
       "channelTitle" : "STREETS OF THAILAND",
       "query" : "beach live cam",
@@ -1411,6 +937,7 @@
     },
     {
       "category" : "scenery",
+      "channelCountry" : "TW",
       "channelId" : "UCLIhpP9E2fL63a450zqLu2g",
       "channelTitle" : "達克拉哈",
       "query" : "即時影像",
@@ -1432,7 +959,7 @@
     },
     {
       "category" : "beach",
-      "channelCountry" : "GB",
+      "channelCountry" : "TH",
       "channelId" : "UCmYyJaUxYiF5IbLx-0jFXHQ",
       "channelTitle" : "The Real Samui Webcam",
       "query" : "beach cam live stream",
@@ -1476,38 +1003,6 @@
     },
     {
       "category" : "scenery",
-      "channelId" : "UC9N8jQEgv7fZ-WRT8-vW03A",
-      "channelTitle" : "和南寺迂園道一",
-      "query" : "即時影像",
-      "thumbnail" : "https://i.ytimg.com/vi/8MRTtfSj3Oo/maxresdefault_live.jpg",
-      "title" : "[即時影像] ☸️ 花蓮和南寺 ☸️ Vandana Monastery live camera [Hualien, Taiwan]",
-      "videoId" : "8MRTtfSj3Oo",
-      "viewers" : 2
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "PL",
-      "channelId" : "UCzDaUVSGFfWtj2xoc8m_jZw",
-      "channelTitle" : "Transmi TO",
-      "query" : "kamera live",
-      "thumbnail" : "https://i.ytimg.com/vi/SfFJHe2LFm8/maxresdefault_live.jpg",
-      "title" : "Kamera kolej Solina - zapora, kolejka gondolowa, kamera obrotowa. Udostępnij na FB",
-      "videoId" : "SfFJHe2LFm8",
-      "viewers" : 2
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "US",
-      "channelId" : "UC6Iv92nZE21XWt0B1ZTCd6Q",
-      "channelTitle" : "Space Googlevesaire",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/0Jiz0HZP2Dk/maxresdefault_live.jpg",
-      "title" : "ISS LIVE 24/7: Earth From Space in Real Time | NASA Space Station Cameras &amp; Tracking",
-      "videoId" : "0Jiz0HZP2Dk",
-      "viewers" : 2
-    },
-    {
-      "category" : "scenery",
       "channelCountry" : "TW",
       "channelId" : "UCE8omMvpPxleZ42Mk2MHQhQ",
       "channelTitle" : "Taichung Tucheng Live",
@@ -1537,17 +1032,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/0FlBuPhY4EM/maxresdefault_live.jpg",
       "title" : "Vista Panorâmica da BR-101 AO VIVO | Trânsito em Tempo Real • Arena das Dunas • Clima 24h | Natal/RN",
       "videoId" : "0FlBuPhY4EM",
-      "viewers" : 2
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "DE",
-      "channelId" : "UCWNdc7wI92h6DlvZPUEPPJQ",
-      "channelTitle" : "Rixxel",
-      "query" : "livecam",
-      "thumbnail" : "https://i.ytimg.com/vi/r9Fcbzt8fX0/maxresdefault_live.jpg",
-      "title" : "Livecam Nistkasten Meisen Cam - Heide - DE Birdbox Heide Germany | Day 14.10.2026",
-      "videoId" : "r9Fcbzt8fX0",
       "viewers" : 2
     },
     {
@@ -1695,7 +1179,7 @@
     },
     {
       "category" : "beach",
-      "channelCountry" : "CA",
+      "channelCountry" : "US",
       "channelId" : "UCdMUgj9aXg5rBjw3ep8R7Pg",
       "channelTitle" : "Earth Watch Live",
       "query" : "beach live cam",
@@ -1706,24 +1190,13 @@
     },
     {
       "category" : "cityscape",
-      "channelCountry" : "HK",
+      "channelCountry" : "SG",
       "channelId" : "UCeh-xpdolXxtC7ey15ccW-g",
       "channelTitle" : "Christoph Burgdorfer",
       "query" : "Singapore live cam",
       "thumbnail" : "https://i.ytimg.com/vi/Z7hAgOjTlbo/maxresdefault_live.jpg",
       "title" : "Singapore Hazy Port 4K Livestream Disney Cruise (Tanjong Pagar live shipping webcam) with LoFi beats",
       "videoId" : "Z7hAgOjTlbo",
-      "viewers" : 1
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "ES",
-      "channelId" : "UCKqAJfYEVCPLbdgOm8QqSQg",
-      "channelTitle" : "DIRECTO NATURA",
-      "query" : "cámara en vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/TUrx5laadiY/maxresdefault_live.jpg",
-      "title" : "🔥 Incendio en el robledal | Un oasis entre las cenizas 🔴 DIRECTO (Cámara 84 | Guadalajara)",
-      "videoId" : "TUrx5laadiY",
       "viewers" : 1
     },
     {
@@ -1739,6 +1212,7 @@
     },
     {
       "category" : "scenery",
+      "channelCountry" : "TW",
       "channelId" : "UCpQVW7GL3VZ3I-Dql6Tr4yw",
       "channelTitle" : "半島秘境達人工作坊",
       "query" : "即時影像",
@@ -1756,27 +1230,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/-_QWNPO0-UM/maxresdefault_live.jpg",
       "title" : "【 Live Cam】小琉球即時影像 - 花瓶岩｜Vase Rock｜Xiao Liuqiu｜大鵬灣國家風景區管理處",
       "videoId" : "-_QWNPO0-UM",
-      "viewers" : 1
-    },
-    {
-      "category" : "scenery",
-      "channelId" : "UC4YL363B1jxNscVwMj5HKpw",
-      "channelTitle" : "Tiempo Severo Mazatlán",
-      "query" : "cámara en vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/UuEqwyUWKQI/maxresdefault_live.jpg",
-      "title" : "Mazatlán CÁMARA EN VIVO",
-      "videoId" : "UuEqwyUWKQI",
-      "viewers" : 1
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UCYewr_fdUX-b1ggI_kYdeGw",
-      "channelTitle" : "きなこもちもち-Hamster",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/oMaD0l65Ofg/maxresdefault_live.jpg",
-      "title" : "【24h LIVE】ハムスターライブカメラ配信 | 24/7 Hamster Live Cam",
-      "videoId" : "oMaD0l65Ofg",
       "viewers" : 1
     },
     {
@@ -1847,6 +1300,7 @@
     },
     {
       "category" : "scenery",
+      "channelCountry" : "MX",
       "channelId" : "UCCejV-BYa_kTNBlsgeLtNVA",
       "channelTitle" : "Webcams de México TV / Canal 8",
       "query" : "cámara en vivo",
@@ -1857,23 +1311,13 @@
     },
     {
       "category" : "scenery",
+      "channelCountry" : "MX",
       "channelId" : "UCShyUuV_sSnc44oPBMhPBrw",
       "channelTitle" : "Webcams de México TV / Canal 10",
       "query" : "cámara en vivo",
       "thumbnail" : "https://i.ytimg.com/vi/N_myRz6mN1Q/sddefault_live.jpg",
       "title" : "Acapulco, Guerrero En Vivo | Vista Playa El Morro",
       "videoId" : "N_myRz6mN1Q",
-      "viewers" : 1
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "JP",
-      "channelId" : "UCBxTBfIdhcxbGr0XeVpLzfA",
-      "channelTitle" : "庭池アクアLIVE",
-      "query" : "ライブカメラ",
-      "thumbnail" : "https://i.ytimg.com/vi/7IXf6sFxy-o/maxresdefault_live.jpg",
-      "title" : "【24時間LIVE】金魚と錦鯉の庭池｜水中ライブカメラ・睡眠・癒しBGM｜Koi &amp; Goldfish Pond Live from Japan",
-      "videoId" : "7IXf6sFxy-o",
       "viewers" : 1
     },
     {
@@ -1885,28 +1329,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/3jDtrLWiVKM/maxresdefault_live.jpg",
       "title" : "Hawick TV LiveCam - The High Street",
       "videoId" : "3jDtrLWiVKM",
-      "viewers" : 1
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "TW",
-      "channelId" : "UC1ELTTXdRlX6HCwUdJr1yDw",
-      "channelTitle" : "台灣地震氣象即時觀測 Taiwan Earthquake & Weather Live",
-      "query" : "即時影像",
-      "thumbnail" : "https://i.ytimg.com/vi/5cRG33-IVVg/maxresdefault_live.jpg",
-      "title" : "🔴LIVE 台灣地震氣象天氣路況即時監測｜Taiwan Earthquake and Weather Live Monitoring｜台湾の天気リアルタイム監視｜24hr",
-      "videoId" : "5cRG33-IVVg",
-      "viewers" : 1
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "RU",
-      "channelId" : "UCFZLnAWs7zzAlsRwHXkiWwA",
-      "channelTitle" : "Первый Детский",
-      "query" : "онлайн камера",
-      "thumbnail" : "https://i.ytimg.com/vi/FiXvXis7JtA/maxresdefault_live.jpg",
-      "title" : "Дымок и его семейка - все серии подряд 🔴 Смотреть онлайн видео для детей",
-      "videoId" : "FiXvXis7JtA",
       "viewers" : 1
     },
     {
@@ -1953,6 +1375,7 @@
     },
     {
       "category" : "scenery",
+      "channelCountry" : "TW",
       "channelId" : "UCCsRoeyhuazn1-CT7b3HWfg",
       "channelTitle" : "花瓶岩",
       "query" : "即時影像",
@@ -1991,14 +1414,6 @@
       "videoId" : "L1S6fkRkoXM"
     },
     {
-      "category" : "scenery",
-      "channelId" : "UCk-pw1zOlShmTRcdF1xxfig",
-      "channelTitle" : "CÂMARA DE VEREADORES DE ANTÔNIO GONÇALVES ",
-      "query" : "cámara en vivo",
-      "title" : "Transmissão ao vivo de CÂMARA DE VEREADORES DE ANTÔNIO GONÇALVES",
-      "videoId" : "zC_BMceFrA4"
-    },
-    {
       "category" : "scenic",
       "channelCountry" : "US",
       "channelId" : "UCUyHh9bRlaPmQPuZ8B4Mt8A",
@@ -2027,16 +1442,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/v8EHx_ixEKU/maxresdefault_live.jpg",
       "title" : "AO VIVO PRAIA GRANDE    - BOQUEIRÃO GUILHERMINA- CÂMERA",
       "videoId" : "v8EHx_ixEKU"
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCKAap-159oZbRwpPrvzdWhg",
-      "channelTitle" : "tvcamaragoiania",
-      "query" : "cámara en vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/eFxfP-Qu5-E/maxresdefault_live.jpg",
-      "title" : "13/10/2026 - TV Câmara Ao Vivo",
-      "videoId" : "eFxfP-Qu5-E"
     },
     {
       "category" : "beach",
@@ -2079,16 +1484,6 @@
       "videoId" : "ZHkq9HZL3h8"
     },
     {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCmkgkpuRbUGzwLSpnV2nevQ",
-      "channelTitle" : "Rio TV Câmara",
-      "query" : "cámara en vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/QUKZP4aXuD0/maxresdefault_live.jpg",
-      "title" : "RIO TV CÂMARA AO VIVO",
-      "videoId" : "QUKZP4aXuD0"
-    },
-    {
       "category" : "cityscape",
       "channelCountry" : "US",
       "channelId" : "UCFbd69s_b63mA7qvpnG6U8Q",
@@ -2110,24 +1505,7 @@
     },
     {
       "category" : "scenery",
-      "channelId" : "UCJXfRwA3kmazqykenv34s9g",
-      "channelTitle" : "CÂMARA MUNICIPAL PLANALTO",
-      "query" : "cámara en vivo",
-      "title" : "Transmissão ao vivo de CÂMARA MUNICIPAL PLANALTO",
-      "videoId" : "rqYbjkqVWwk"
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCE2Md6AJrOAUqDRAW29RFig",
-      "channelTitle" : "Hophop a coruja",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/WdKgqfwkqHI/maxresdefault_live.jpg",
-      "title" : "🔴 Hophop, a coruja, AO VIVO! Desenho animado em português. Vídeo infantil",
-      "videoId" : "WdKgqfwkqHI"
-    },
-    {
-      "category" : "scenery",
+      "channelCountry" : "TW",
       "channelId" : "UCktE5bbN_RyE-ZXzzgsQLjw",
       "channelTitle" : "九蛙伊達邵",
       "query" : "即時影像",
@@ -2144,15 +1522,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/wLCCVy2JY18/maxresdefault_live.jpg",
       "title" : "LDV - Emerald Shores Beach Cam, Miramar Beach FL",
       "videoId" : "wLCCVy2JY18"
-    },
-    {
-      "category" : "scenery",
-      "channelId" : "UCNMg5tWQsUOHLVuiXH10oXg",
-      "channelTitle" : "ALE Paulino",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/M2x0Rm3sEx0/maxresdefault_live.jpg",
-      "title" : "SESI-BAURU X OSASCO AO VIVO COM IMAGENS VÔLEI FEMININO",
-      "videoId" : "M2x0Rm3sEx0"
     },
     {
       "category" : "beach",
@@ -2173,25 +1542,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/sGrMkMV26Uw/maxresdefault_live.jpg",
       "title" : "Big Moose Mountain Ski Area - Live Lift Cam",
       "videoId" : "sGrMkMV26Uw"
-    },
-    {
-      "category" : "scenery",
-      "channelId" : "UCZAQzD8TmMfUrhBaEElZhjg",
-      "channelTitle" : "CIA AgRoss Camera 14",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/SopRuVFXPUQ/maxresdefault_live.jpg",
-      "title" : "Transmissão ao vivo de CIA AgRoss Camera 14",
-      "videoId" : "SopRuVFXPUQ"
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCT_8WtjN20pye20BZ6LdkMQ",
-      "channelTitle" : "RailCam Brasil ",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/ogk686fpXyY/maxresdefault_live.jpg",
-      "title" : "TRENS AO VIVO NA ESTAÇÃO DE BROTAS, SP - BRASIL",
-      "videoId" : "ogk686fpXyY"
     },
     {
       "category" : "scenery",
@@ -2245,7 +1595,7 @@
     },
     {
       "category" : "cityscape",
-      "channelCountry" : "GB",
+      "channelCountry" : "NP",
       "channelId" : "UCp8FhsgzNmYR6F1HxTDMTvw",
       "channelTitle" : "WEBCAM NEPAL CITIES & TOWNS",
       "query" : "city live cam",
@@ -2265,20 +1615,13 @@
     },
     {
       "category" : "scenery",
+      "channelCountry" : "HK",
       "channelId" : "UCBDx32JFg9vk9VHtQppv5tg",
       "channelTitle" : "香港人の日常生活",
       "query" : "即時影像",
       "thumbnail" : "https://i.ytimg.com/vi/PznqRZYdiHs/maxresdefault_live.jpg",
       "title" : "✨【Nature Sound 🔊】Hong Kong Aberdeen Harbour Live Camera - 香港市景即時影像 香港仔海峽✨",
       "videoId" : "PznqRZYdiHs"
-    },
-    {
-      "category" : "scenery",
-      "channelId" : "UC21h1wV8-x1m_P6_fruyYUw",
-      "channelTitle" : "Câmara Municipal de Vereadores de Ilópolis",
-      "query" : "cámara en vivo",
-      "title" : "Transmissão ao vivo de Câmara Municipal de Vereadores de Ilópolis",
-      "videoId" : "Swz6M9b8RQM"
     },
     {
       "category" : "scenery",
@@ -2289,23 +1632,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/vcF28cEdkT8/maxresdefault_live.jpg",
       "title" : "여수시 오동도 라이브캠(Odongdo livecam in Yeosu, South Korea)",
       "videoId" : "vcF28cEdkT8"
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCAM0X-d0E6jNr0bF2Dgt4YQ",
-      "channelTitle" : "Oni TV Oficial",
-      "query" : "cámara en vivo",
-      "title" : "🔴PEDRO CÂMARA. AO VIVO. Live com convidado.",
-      "videoId" : "Pw68NAdcme4"
-    },
-    {
-      "category" : "scenery",
-      "channelId" : "UCYnPudzJgCdXymbNqri2KCw",
-      "channelTitle" : "câmara de pracuúba",
-      "query" : "cámara en vivo",
-      "title" : "Transmissão ao vivo de câmara de pracuúba",
-      "videoId" : "28-bhFFR8k4"
     },
     {
       "category" : "beach",
@@ -2319,6 +1645,7 @@
     },
     {
       "category" : "scenery",
+      "channelCountry" : "TW",
       "channelId" : "UC_p-x5S9NXmM1sObuQdapeQ",
       "channelTitle" : "拉普拉斯惡魔",
       "query" : "即時影像",
@@ -2338,26 +1665,7 @@
     },
     {
       "category" : "scenery",
-      "channelCountry" : "TW",
-      "channelId" : "UCORVxHPbE0Pq5y9xU00DtlQ",
-      "channelTitle" : "大社青雲宮",
-      "query" : "即時影像",
-      "thumbnail" : "https://i.ytimg.com/vi/189alHicFLc/maxresdefault_live.jpg",
-      "title" : "【LIVE】大社青雲宮│即時影像│TAIWAN",
-      "videoId" : "189alHicFLc"
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "ES",
-      "channelId" : "UCszQ723XLNr5UjgGn_xSZEw",
-      "channelTitle" : "• Slow Space •",
-      "query" : "livecam",
-      "thumbnail" : "https://i.ytimg.com/vi/IA7UzJT5hQs/maxresdefault_live.jpg",
-      "title" : "14/10/26  ☀️  Slow TV · Daily Livecam over Palma de Mallorca",
-      "videoId" : "IA7UzJT5hQs"
-    },
-    {
-      "category" : "scenery",
+      "channelCountry" : "CL",
       "channelId" : "UC4chmtQ93NOnmfA1tIdX90Q",
       "channelTitle" : "SRGenial",
       "query" : "cámara en vivo",
@@ -2367,30 +1675,13 @@
     },
     {
       "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCscOlRk7xHJZGAKJYvPAFaA",
-      "channelTitle" : "Vida na Roça Brazil Live Cam Wildlife Nature",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/7lKH8Uv3SPY/sddefault_live.jpg",
-      "title" : "🔴 LIVE 24/7: Brazilian Farm &amp; Pond Cam 🇧🇷|Fish,Sheep,Dogs&amp;Nature Sounds Countryside",
-      "videoId" : "7lKH8Uv3SPY"
-    },
-    {
-      "category" : "scenery",
+      "channelCountry" : "TW",
       "channelId" : "UCGcIEySbsq1_jMjukU9MiAQ",
       "channelTitle" : "花蓮縣政府觀光處東大門夜市即時影像",
       "query" : "即時影像",
       "thumbnail" : "https://i.ytimg.com/vi/ASzrS-4ZcA8/maxresdefault_live.jpg",
       "title" : "花蓮東大門國際觀光夜市#花蓮#花蓮夜市#觀光夜市#福町夜市#原住民一條街#各省一條街#自強夜市#夜市#逛夜市#踅夜市#迺夜市4",
       "videoId" : "ASzrS-4ZcA8"
-    },
-    {
-      "category" : "scenery",
-      "channelId" : "UCN7EFetPREfuzcoaUVWrO7w",
-      "channelTitle" : "Câmara de Vereadores de Miraguaí - RS ",
-      "query" : "cámara en vivo",
-      "title" : "Transmissão ao Vivo da Câmara de Vereadores",
-      "videoId" : "WO-xIHBpQQ4"
     },
     {
       "category" : "beach",
@@ -2414,14 +1705,7 @@
     },
     {
       "category" : "scenery",
-      "channelId" : "UCTK9g8DntuhaHbF8qH7VJaA",
-      "channelTitle" : "Legisss Sepé",
-      "query" : "cámara en vivo",
-      "title" : "Transmissão ao vivo de Tv Câmara - São Sepé",
-      "videoId" : "oRULKdPgpyM"
-    },
-    {
-      "category" : "scenery",
+      "channelCountry" : "CL",
       "channelId" : "UCsOZ12wfyt4ihYOZyhyKUtQ",
       "channelTitle" : "Tele Genial",
       "query" : "cámara en vivo",
@@ -2450,32 +1734,13 @@
     },
     {
       "category" : "beach",
-      "channelCountry" : "US",
+      "channelCountry" : "BS",
       "channelId" : "UCBA0Mp1Sfg8VW9D3XcswIMA",
       "channelTitle" : "LIVE SUNRISE AND SUNSETS IN HARBOUR ISLAND BAHAMAS",
       "query" : "beach live cam",
       "thumbnail" : "https://i.ytimg.com/vi/G4KHrI4IIII/maxresdefault_live.jpg",
       "title" : "GOD DID THIS! THE BEACH! LIVE SUNRISE/SUNSET. HARBOUR ISLAND BAHAMAS.",
       "videoId" : "G4KHrI4IIII"
-    },
-    {
-      "category" : "scenery",
-      "channelId" : "UCTHITyMlLxQX28ymzCac7vQ",
-      "channelTitle" : "Cia Brother Camera 17",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/cGeAbbx6v6o/maxresdefault_live.jpg",
-      "title" : "Transmissão ao vivo de Cia Brother Camera 17",
-      "videoId" : "cGeAbbx6v6o"
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "TW",
-      "channelId" : "UCXhZRVMo379WniSxPti9KiQ",
-      "channelTitle" : "網路達人(InfoTechConsult)",
-      "query" : "即時影像",
-      "thumbnail" : "https://i.ytimg.com/vi/rIAtd7jM5Jo/maxresdefault_live.jpg",
-      "title" : "桃園市中壢區即時影像｜Taoyuan Zhongli Live Cam｜天氣實況 Taiwan Weather Cam｜City View 24/7 環境音 ASMR 舒眠 2026/10/5",
-      "videoId" : "rIAtd7jM5Jo"
     },
     {
       "category" : "cityscape",
@@ -2486,14 +1751,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/WyNB4hLQZc0/maxresdefault.jpg",
       "title" : "🔴 LIVE: Downtown Houston Skyline &amp; I-45 Traffic Cam | October 13, 2026 - 12 AM-12 PM",
       "videoId" : "WyNB4hLQZc0"
-    },
-    {
-      "category" : "scenery",
-      "channelId" : "UCyRWSxa4rbNKIeS79AxTZXA",
-      "channelTitle" : "3a Câmara Cível TJGO",
-      "query" : "cámara en vivo",
-      "title" : "TJGO - 3ª Câmara Cível - Sessão AO VIVO -  13/10/2026 às 13h00min",
-      "videoId" : "d_0F8DsvcQA"
     },
     {
       "category" : "beach",
@@ -2566,16 +1823,6 @@
       "videoId" : "qJNMSqESnFY"
     },
     {
-      "category" : "scenery",
-      "channelCountry" : "TW",
-      "channelId" : "UCi95GjYcmgfRYwIxDm-oV7g",
-      "channelTitle" : "達和環保 新店分公司",
-      "query" : "即時影像",
-      "thumbnail" : "https://i.ytimg.com/vi/p7Wn1Sn0KDM/maxresdefault_live.jpg",
-      "title" : "新店垃圾焚化廠 即時影像",
-      "videoId" : "p7Wn1Sn0KDM"
-    },
-    {
       "category" : "cityscape",
       "channelCountry" : "BR",
       "channelId" : "UCAjAwOKrfmZX1552JnE_i5g",
@@ -2584,15 +1831,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/n8DSfkh3WkU/maxresdefault.jpg",
       "title" : "🔴 TÁ AO VIVO --24hs, 4 cantos Olinda, Câmera de Rua | City Live Cam | #cityviews  #citylife  #urban",
       "videoId" : "n8DSfkh3WkU"
-    },
-    {
-      "category" : "scenery",
-      "channelId" : "UCsPv08UoSB-_XZkelDzKeQQ",
-      "channelTitle" : "NSC Total",
-      "query" : "câmera ao vivo",
-      "thumbnail" : "https://i.ytimg.com/vi/uobBX1iHUII/maxresdefault_live.jpg",
-      "title" : "AO VIVO: CÂMERA NA OKTOBERFEST BLUMENAU 2026 | VILA GERMÂNICA",
-      "videoId" : "uobBX1iHUII"
     },
     {
       "category" : "scenery",
@@ -2615,35 +1853,6 @@
       "videoId" : "5r8fLrwuqoU"
     },
     {
-      "category" : "scenery",
-      "channelCountry" : "FR",
-      "channelId" : "UCoKz06eC8qXoJVAuKLCfYyg",
-      "channelTitle" : "Oiseaux-Guerande",
-      "query" : "webcam en direct",
-      "thumbnail" : "https://i.ytimg.com/vi/FjiD1Dwd7Hk/maxresdefault_live.jpg",
-      "title" : "[Webcam en direct] Les Oiseaux de Guérande",
-      "videoId" : "FjiD1Dwd7Hk"
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "TW",
-      "channelId" : "UCDsk5ZM7dP29hc5in7oepJg",
-      "channelTitle" : "中興停車場",
-      "query" : "即時影像",
-      "thumbnail" : "https://i.ytimg.com/vi/9EGF2WkS_qA/maxresdefault_live.jpg",
-      "title" : "【4K LIVE】中興停車場Zhongxing Parking Lot",
-      "videoId" : "9EGF2WkS_qA"
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCeT9RlxMQQHnI4w782-ZpRA",
-      "channelTitle" : "Câmara Municipal de Três Rios",
-      "query" : "cámara en vivo",
-      "title" : "AO VIVO SESSÃO ORDINÁRIA - CMTR-RJ - 13/10/2026 - CÂMARA MUNICIPAL DE TRÊS RIOS",
-      "videoId" : "g6shuKXVd64"
-    },
-    {
       "category" : "beach",
       "channelCountry" : "GB",
       "channelId" : "UCWuoYuUza2qNg4L2Di-rZsA",
@@ -2652,15 +1861,6 @@
       "thumbnail" : "https://i.ytimg.com/vi/Gubz3lNm2mw/maxresdefault_live.jpg",
       "title" : "Live Webcam East Beach, Isle of Berneray, Outer Hebrides, Scotland, 24 Hour Live Streaming",
       "videoId" : "Gubz3lNm2mw"
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UC3b3mQKVe4OhcVzdGzk9Ang",
-      "channelTitle" : "Câmara Municipal de Vereadores - Nova Canaã",
-      "query" : "cámara en vivo",
-      "title" : "Transmissão ao vivo da Câmara Municipal de Vereadores - Nova Canaã 13/10/2026",
-      "videoId" : "YPpTjZ3grEY"
     },
     {
       "category" : "scenic",
@@ -2693,24 +1893,6 @@
       "videoId" : "kD8mpkwIxJU"
     },
     {
-      "category" : "beach",
-      "channelId" : "UCxh1EiP9WuhtFw8l_FDvmrQ",
-      "channelTitle" : "Simon Trigger",
-      "query" : "surf cam live",
-      "thumbnail" : "https://i.ytimg.com/vi/QfQPsaXdF7E/maxresdefault_live.jpg",
-      "title" : "Crunchie Point Live Surf Cam",
-      "videoId" : "QfQPsaXdF7E"
-    },
-    {
-      "category" : "scenery",
-      "channelCountry" : "BR",
-      "channelId" : "UCq2LKqKg7MzstzHvVoMiyeA",
-      "channelTitle" : "Câmara Municipal de São Joaquim da Barra /SP",
-      "query" : "cámara en vivo",
-      "title" : "Transmissão ao vivo de Câmara Municipal de São Joaquim da Barra /SP",
-      "videoId" : "gF8ZVFs4kJU"
-    },
-    {
       "category" : "cityscape",
       "channelCountry" : "KR",
       "channelId" : "UC4kQy5CW1gvNtm09ilf6XBQ",
@@ -2741,7 +1923,7 @@
       "videoId" : "lac48e5anps"
     }
   ],
-  "generatedAt" : "2026-10-14T07:25:35Z",
+  "generatedAt" : "2026-10-14T07:38:04Z",
   "minedQueries" : [
     "Bangkok live cam",
     "Buenos Aires live cam",
