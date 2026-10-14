@@ -1,9 +1,11 @@
 name: Refresh the live feed
 
 on:
-  # 暂不挂 schedule。channels-source.json 现在 138 条，超过单次配额上限（100），
-  # 挂上去只会每两天失败一次。等第二轮挖掘完、目录定型后再决定是收窄到 100 条以内
-  # 还是改成分批轮换，那时把 cron 加回来。定时任务本身没被放弃，只是现在不该跑。
+  # 暂不挂 schedule —— 但**原因变了**（2026-10-14）：配额不再是拦路虎，两段式取源让全量刷新
+  # 从 13,800 units 降到约 210 units，"一天刷一遍 138 个频道"现在成立。挂上 cron 只需要把
+  # 下面这两行注释解开，剩下的是一条产品决定：feed 是否要每天自动更新一次。
+  # schedule:
+  #   - cron: "17 3 * * *"
   workflow_dispatch:
     # 手动触发时可以只刷前 N 条：data 分支要等第一次成功运行才存在，
     # 用这个先把部署链路和联调数据打通。
@@ -26,16 +28,54 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: 取上一次的产物与清理账本
+        run: |
+          set -euo pipefail
+          # data 分支上永远只有这两份文件（孤儿提交）。取不到不影响正确性，只是这一轮全部走"查窗口"、
+          # 账本从零开始——多花几十 units，且要等一周才够判一个频道。
+          # 拿得到的话：feed 里仍在播的条目会被直接复用（复用的是已经被用户验证过可播的那条流），
+          # 账本则用来累计"连续几次没拿到可播的流"。
+          git fetch -q origin data --depth=1 || true
+
+          if git show origin/data:live-youtube.json > previous-live-youtube.json 2>/dev/null; then
+            echo "拿到上一次的产物：$(wc -c < previous-live-youtube.json | tr -d ' ') 字节"
+          else
+            echo "没有上一次的产物，这一轮不复用"
+            rm -f previous-live-youtube.json
+          fi
+
+          if git show origin/data:refresh-state.json > previous-refresh-state.json 2>/dev/null; then
+            echo "拿到上一次的清理账本：$(wc -c < previous-refresh-state.json | tr -d ' ') 字节"
+          else
+            echo "没有上一次的账本，从零开始记"
+            rm -f previous-refresh-state.json
+          fi
+
       - name: 生成 live-youtube.json
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
           LIMIT: ${{ inputs.limit }}
         run: |
           set -euo pipefail
+          PREVIOUS=""
+          if [ -f previous-live-youtube.json ]; then
+            PREVIOUS="--previous previous-live-youtube.json"
+          fi
+          STATE=""
+          if [ -f previous-refresh-state.json ]; then
+            STATE="--state previous-refresh-state.json"
+          fi
           if [ -n "${LIMIT:-}" ]; then
-            swift Scripts/youtube.swift refresh --limit "$LIMIT"
+            swift Scripts/youtube.swift refresh --limit "$LIMIT" $PREVIOUS $STATE
           else
-            swift Scripts/youtube.swift refresh
+            swift Scripts/youtube.swift refresh $PREVIOUS $STATE
+          fi
+
+          # 账本出了阈值就该处理了。CI 不能改 main 分支上的 curation.json / channels-source.json，
+          # 所以这里只能提示：本地跑一次 `swift Scripts/youtube.swift prune`（0 units）。
+          # 脚本自己已经把"观察中 N 条 / 已达阈值 M 条"打在上面了。
+          if [ -f refresh-state.json ]; then
+            echo "::notice::清理账本已更新；若有达阈值的频道，本地跑 prune 处理（0 units）"
           fi
 
       - name: 推到 data 分支
@@ -59,6 +99,12 @@ jobs:
 
           cp "$GITHUB_WORKSPACE/live-youtube.json" .
           git add live-youtube.json
+
+          # 清理账本一并带上：下一次运行要靠它累计"连续几次没拿到可播的流"。
+          if [ -f "$GITHUB_WORKSPACE/refresh-state.json" ]; then
+            cp "$GITHUB_WORKSPACE/refresh-state.json" .
+            git add refresh-state.json
+          fi
           git -c user.name="github-actions[bot]" \
               -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
               commit -qm "chore: refresh the live feed"

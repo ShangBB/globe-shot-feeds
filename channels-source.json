@@ -1,36 +1,6 @@
 [
   {
-    "category" : "scenic",
-    "channelId" : "UCH3v-NvNtwmFFmK5PVGzkQg",
-    "city" : "Manchester",
-    "country" : "GB",
-    "id" : "yt-manchester-airport",
-    "isLandmark" : true,
-    "name" : "Manchester Airport",
-    "source" : "YouTube · Simon Lowe Aviation"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UC6q_hfBThkGdmQ5Vb4kWjWA",
-    "city" : "London",
-    "country" : "GB",
-    "id" : "yt-heathrow-airport",
-    "isLandmark" : true,
-    "name" : "Heathrow Airport",
-    "source" : "YouTube · Flight Focus 365"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCkQef3Fidr7tm3gNuXgGKPw",
-    "city" : "London",
-    "country" : "GB",
-    "id" : "yt-heathrow-arrivals",
-    "isLandmark" : false,
-    "name" : "Heathrow Arrivals",
-    "source" : "YouTube · BIG JET TV"
-  },
-  {
-    "category" : "nature",
+    "category" : "scenery",
     "channelId" : "UCeXH8GZyV3sVqAr45AvupOA",
     "city" : "Hawaii",
     "country" : "US",
@@ -40,47 +10,7 @@
     "source" : "YouTube · USGS"
   },
   {
-    "category" : "nature",
-    "channelId" : "UCNMulUCdUibAMPnaR1e0kEw",
-    "city" : "Melbourne",
-    "country" : "AU",
-    "id" : "yt-melbourne-falcon-nest",
-    "isLandmark" : false,
-    "name" : "Melbourne Falcon Nest",
-    "source" : "YouTube · FalconCam Project"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCZss13TJZLtZ0ones3HpYMQ",
-    "city" : "Sydney",
-    "country" : "AU",
-    "id" : "yt-sydney-sea-eagle-nest",
-    "isLandmark" : false,
-    "name" : "Sydney Sea Eagle Nest",
-    "source" : "YouTube · Sea-EagleCAM4"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCNZCKDhAVtbh7sddChTxI7w",
-    "city" : "São Paulo",
-    "country" : "BR",
-    "id" : "yt-s-o-paulo-guarulhos-airport",
-    "isLandmark" : false,
-    "name" : "São Paulo Guarulhos Airport",
-    "source" : "YouTube · SBGR LIVE"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCnM5iMGiKsZg-iOlIO2ZkdQ",
-    "city" : "Monterey",
-    "country" : "US",
-    "id" : "yt-monterey-bay-aquarium",
-    "isLandmark" : false,
-    "name" : "Monterey Bay Aquarium",
-    "source" : "YouTube · Monterey Bay Aquarium"
-  },
-  {
-    "category" : "cityscape",
+    "category" : "street",
     "channelId" : "UCKtFn0R-NGm6cocqdoGAQTA",
     "city" : "Yokohama",
     "country" : "JP",
@@ -90,47 +20,7 @@
     "source" : "YouTube · 横浜汽車道ライブカメラ /Live Cam Yokohama Japan"
   },
   {
-    "category" : "scenic",
-    "channelId" : "UC0R-K3crhMX9jzswbmfIORw",
-    "city" : "Lisbon",
-    "country" : "PT",
-    "id" : "yt-lisbon-airport",
-    "isLandmark" : false,
-    "name" : "Lisbon Airport",
-    "source" : "YouTube · AVIAÇÃO TV"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UChWGYkK0I8U83C0FxAxWy4w",
-    "city" : "Rio de Janeiro",
-    "country" : "BR",
-    "id" : "yt-copacabana-beach",
-    "isLandmark" : true,
-    "name" : "Copacabana Beach",
-    "source" : "YouTube · Homes in Rio"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UC6hcr5RRZvTtSfsNJ2MLj2Q",
-    "city" : "Arraial do Cabo",
-    "country" : "BR",
-    "id" : "yt-arraial-do-cabo-beach",
-    "isLandmark" : false,
-    "name" : "Arraial do Cabo Beach",
-    "source" : "YouTube · Pontal NeTv - Internet 100% Fibra"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UC4-aIBtpNAPqEcMhAyFN6iQ",
-    "city" : "London",
-    "country" : "GB",
-    "id" : "yt-notting-hill-gate",
-    "isLandmark" : true,
-    "name" : "Notting Hill Gate",
-    "source" : "YouTube · Notting Hill Gate Cam"
-  },
-  {
-    "category" : "scenic",
+    "category" : "scenery",
     "channelId" : "UC1wk96r57DHMd0_iGCm6XaA",
     "city" : "Batchawana Bay",
     "country" : "CA",
@@ -140,17 +30,17 @@
     "source" : "YouTube · Superior Wilds"
   },
   {
-    "category" : "cityscape",
-    "channelId" : "UC7SuJuqGTzT1s0R5gtNum2w",
-    "city" : "Boston",
-    "country" : "US",
-    "id" : "yt-boston-common",
+    "category" : "street",
+    "channelId" : "UC4-aIBtpNAPqEcMhAyFN6iQ",
+    "city" : "London",
+    "country" : "GB",
+    "id" : "yt-notting-hill-gate",
     "isLandmark" : true,
-    "name" : "Boston Common",
-    "source" : "YouTube · Third Polar Arch"
+    "name" : "Notting Hill Gate",
+    "source" : "YouTube · Notting Hill Gate Cam"
   },
   {
-    "category" : "cityscape",
+    "category" : "scenery",
     "channelId" : "UCQc7Ol2itgbnMXPjZmPdRRQ",
     "city" : "Cincinnati",
     "country" : "US",
@@ -160,27 +50,17 @@
     "source" : "YouTube · Aaron Preslin"
   },
   {
-    "category" : "beach",
-    "channelId" : "UCPNkrps0FeHFXthbVjR0nlA",
-    "city" : "Costa Teguise",
-    "country" : "ES",
-    "id" : "yt-lanzarote-beach-bar",
-    "isLandmark" : false,
-    "name" : "Lanzarote Beach Bar",
-    "source" : "YouTube · Beach Bar Lanzarote"
+    "category" : "scenery",
+    "channelId" : "UChWGYkK0I8U83C0FxAxWy4w",
+    "city" : "Rio de Janeiro",
+    "country" : "BR",
+    "id" : "yt-copacabana-beach",
+    "isLandmark" : true,
+    "name" : "Copacabana Beach",
+    "source" : "YouTube · Homes in Rio"
   },
   {
-    "category" : "nature",
-    "channelId" : "UCC1XzjkXRz0DLJfH-69t1vQ",
-    "city" : "Pozzuoli",
-    "country" : "IT",
-    "id" : "yt-campi-flegrei",
-    "isLandmark" : false,
-    "name" : "Campi Flegrei",
-    "source" : "YouTube · SolfataraNews"
-  },
-  {
-    "category" : "nature",
+    "category" : "scenery",
     "channelId" : "UC-I69toJP1JJGUSID_xwmLw",
     "city" : "Hawaii",
     "country" : "US",
@@ -190,56 +70,7 @@
     "source" : "YouTube · Lava Watchers"
   },
   {
-    "category" : "scenic",
-    "channelId" : "UC6xytvQk12YygDYVKlY6xQQ",
-    "city" : "Bariloche",
-    "country" : "AR",
-    "id" : "yt-bariloche-patagonia",
-    "isLandmark" : false,
-    "name" : "Bariloche Patagonia",
-    "source" : "YouTube · CLIMA BARILOCHE"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCK3s1knJHPvltGJX7KWZrbg",
-    "country" : "SI",
-    "id" : "yt-slovenia-bird-feeder",
-    "isLandmark" : false,
-    "name" : "Slovenia Bird Feeder",
-    "source" : "YouTube · Luka&Animals"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCp2wwvvhIxKlh44p7tH-s_w",
-    "city" : "East Hampton",
-    "country" : "US",
-    "id" : "yt-east-hampton-main-beach",
-    "isLandmark" : false,
-    "name" : "East Hampton Main Beach",
-    "source" : "YouTube · Hamptons. com"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UC4By8z88TLjDdNwJHekxO-w",
-    "city" : "Melbourne",
-    "country" : "AU",
-    "id" : "yt-melbourne-peregrine-falcons",
-    "isLandmark" : false,
-    "name" : "Melbourne Peregrine Falcons",
-    "source" : "YouTube · Bootleg Streamer"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UC7xxZFjFdv7M9UIk5xw-aDQ",
-    "city" : "New York",
-    "country" : "US",
-    "id" : "yt-new-york-harbor",
-    "isLandmark" : true,
-    "name" : "New York Harbor",
-    "source" : "YouTube · New York Live Camera"
-  },
-  {
-    "category" : "cityscape",
+    "category" : "street",
     "channelId" : "UCVg0E1H6LZBhTt_2oSm2Hzg",
     "city" : "Naha",
     "country" : "JP",
@@ -249,37 +80,7 @@
     "source" : "YouTube · バクノビジョン"
   },
   {
-    "category" : "cityscape",
-    "channelId" : "UCkKJhKO73xF1pK5h9R82ZGQ",
-    "city" : "Osaka",
-    "country" : "JP",
-    "id" : "yt-osaka-dotonbori",
-    "isLandmark" : true,
-    "name" : "Osaka Dotonbori",
-    "source" : "YouTube · MBS NEWS"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCZ6ZuSqeKrjFP7w9lS0nx0Q",
-    "city" : "Davao",
-    "country" : "PH",
-    "id" : "yt-davao-public-market",
-    "isLandmark" : false,
-    "name" : "Davao Public Market",
-    "source" : "YouTube · Maria Deseo - Philippines Live Webcam"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCVw-HgO1ivfBtvxZ3x9pbDA",
-    "city" : "Osaka",
-    "country" : "JP",
-    "id" : "yt-osaka-railway-cam",
-    "isLandmark" : false,
-    "name" : "Osaka Railway Cam",
-    "source" : "YouTube · 【鉄道】大阪ライブカメラ"
-  },
-  {
-    "category" : "cityscape",
+    "category" : "street",
     "channelId" : "UCFMhPK-QTBNIaI8yS5KdlmQ",
     "city" : "New York",
     "country" : "US",
@@ -289,7 +90,37 @@
     "source" : "YouTube · New York Walking TV"
   },
   {
-    "category" : "beach",
+    "category" : "street",
+    "channelId" : "UC7SuJuqGTzT1s0R5gtNum2w",
+    "city" : "Boston",
+    "country" : "US",
+    "id" : "yt-boston-common",
+    "isLandmark" : true,
+    "name" : "Boston Common",
+    "source" : "YouTube · Third Polar Arch"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UC7xxZFjFdv7M9UIk5xw-aDQ",
+    "city" : "New York",
+    "country" : "US",
+    "id" : "yt-new-york-harbor",
+    "isLandmark" : true,
+    "name" : "New York Harbor",
+    "source" : "YouTube · New York Live Camera"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCkKJhKO73xF1pK5h9R82ZGQ",
+    "city" : "Osaka",
+    "country" : "JP",
+    "id" : "yt-osaka-dotonbori",
+    "isLandmark" : true,
+    "name" : "Osaka Dotonbori",
+    "source" : "YouTube · MBS NEWS"
+  },
+  {
+    "category" : "scenery",
     "channelId" : "UCL9JWWZ_e6D-cUNVP4mAtRw",
     "city" : "Key West",
     "country" : "US",
@@ -299,7 +130,17 @@
     "source" : "YouTube · Seek Key West"
   },
   {
-    "category" : "cityscape",
+    "category" : "scenery",
+    "channelId" : "UC6hcr5RRZvTtSfsNJ2MLj2Q",
+    "city" : "Arraial do Cabo",
+    "country" : "BR",
+    "id" : "yt-arraial-do-cabo-beach",
+    "isLandmark" : false,
+    "name" : "Arraial do Cabo Beach",
+    "source" : "YouTube · Pontal NeTv - Internet 100% Fibra"
+  },
+  {
+    "category" : "street",
     "channelId" : "UCRODS6wub2VZ6nKON6PDwdQ",
     "city" : "New York",
     "country" : "US",
@@ -309,46 +150,37 @@
     "source" : "YouTube · New York walks TV"
   },
   {
-    "category" : "scenic",
-    "channelId" : "UC3ppRbUdj-XrSIn-6YHGP3w",
-    "city" : "Portsmouth",
-    "country" : "GB",
-    "id" : "yt-hms-warrior-portsmouth",
+    "category" : "scenery",
+    "channelId" : "UC6xytvQk12YygDYVKlY6xQQ",
+    "city" : "Bariloche",
+    "country" : "AR",
+    "id" : "yt-bariloche-patagonia",
     "isLandmark" : false,
-    "name" : "HMS Warrior, Portsmouth",
-    "source" : "YouTube · Royal Navy Museums"
+    "name" : "Bariloche Patagonia",
+    "source" : "YouTube · CLIMA BARILOCHE"
   },
   {
-    "category" : "nature",
-    "channelId" : "UCob_chLKvtrcg8KE-KpQiig",
-    "city" : "Traverse City",
+    "category" : "scenery",
+    "channelId" : "UCC1XzjkXRz0DLJfH-69t1vQ",
+    "city" : "Pozzuoli",
+    "country" : "IT",
+    "id" : "yt-campi-flegrei",
+    "isLandmark" : false,
+    "name" : "Campi Flegrei",
+    "source" : "YouTube · SolfataraNews"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCp2wwvvhIxKlh44p7tH-s_w",
+    "city" : "East Hampton",
     "country" : "US",
-    "id" : "yt-traverse-city-eagle-nest",
+    "id" : "yt-east-hampton-main-beach",
     "isLandmark" : false,
-    "name" : "Traverse City Eagle Nest",
-    "source" : "YouTube · Great Lakes Bald Eagle Cam"
+    "name" : "East Hampton Main Beach",
+    "source" : "YouTube · Hamptons. com"
   },
   {
-    "category" : "cityscape",
-    "channelId" : "UC34eMne6xBmBqsAfA8q8ZAg",
-    "city" : "Osaka",
-    "country" : "JP",
-    "id" : "yt-shin-osaka-station",
-    "isLandmark" : false,
-    "name" : "Shin-Osaka Station",
-    "source" : "YouTube · BGV Cam"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCbk8aByq7psiAKx41MQTnzQ",
-    "country" : "GB",
-    "id" : "yt-scottish-wildlife-garden",
-    "isLandmark" : false,
-    "name" : "Scottish Wildlife Garden",
-    "source" : "YouTube · Scottish Wildlife Garden"
-  },
-  {
-    "category" : "cityscape",
+    "category" : "street",
     "channelId" : "UCdr9cCd_WQPlLCAUjNaoACg",
     "city" : "Las Vegas",
     "country" : "US",
@@ -358,57 +190,7 @@
     "source" : "YouTube · LV Strip Cam"
   },
   {
-    "category" : "beach",
-    "channelId" : "UCbMSl7-RvWs4szJNHwdXCpg",
-    "city" : "Madeira Beach",
-    "country" : "US",
-    "id" : "yt-madeira-beach-marina",
-    "isLandmark" : false,
-    "name" : "Madeira Beach Marina",
-    "source" : "YouTube · Hubbard's Marina"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCmYyJaUxYiF5IbLx-0jFXHQ",
-    "city" : "Koh Samui",
-    "country" : "TH",
-    "id" : "yt-lamai-beach-koh-samui",
-    "isLandmark" : false,
-    "name" : "Lamai Beach, Koh Samui",
-    "source" : "YouTube · The Real Samui Webcam"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCG-Icsd_kbKnt9QraydFQPQ",
-    "city" : "London",
-    "country" : "GB",
-    "id" : "yt-london-bridge-thames",
-    "isLandmark" : true,
-    "name" : "London Bridge & Thames",
-    "source" : "YouTube · Beach Life Cams"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCWe6K8h_5sXGCnzvt-exu8Q",
-    "city" : "St Louis",
-    "country" : "US",
-    "id" : "yt-st-louis-railcam",
-    "isLandmark" : false,
-    "name" : "St Louis Railcam",
-    "source" : "YouTube · LIVE Trains"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCtMr9ZgraacKwDyBhA_FbqQ",
-    "city" : "Miami",
-    "country" : "US",
-    "id" : "yt-dade-county-eagle-nest",
-    "isLandmark" : false,
-    "name" : "Dade County Eagle Nest",
-    "source" : "YouTube · Wildlife Rescue of Dade County"
-  },
-  {
-    "category" : "scenic",
+    "category" : "scenery",
     "channelId" : "UCU_cCugjd0QvDSaQXX3ftKQ",
     "city" : "Big Bear Lake",
     "country" : "US",
@@ -418,306 +200,7 @@
     "source" : "YouTube · California Live Cams"
   },
   {
-    "category" : "scenic",
-    "channelId" : "UCmM8fJ5uDl8pqu8nnd8Ixlg",
-    "city" : "Montreal",
-    "country" : "CA",
-    "id" : "yt-montreal-trudeau-airport",
-    "isLandmark" : false,
-    "name" : "Montreal Trudeau Airport",
-    "source" : "YouTube · Moore Equipment Ltd."
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCUlMJzaHTOnN30KG4j8CGyQ",
-    "city" : "Killington",
-    "country" : "US",
-    "id" : "yt-vermont-ski-resorts",
-    "isLandmark" : false,
-    "name" : "Vermont Ski Resorts",
-    "source" : "YouTube · VermontLiveCam"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCU63WMFjED35DgXhMLTjlHw",
-    "city" : "Seoul",
-    "country" : "KR",
-    "id" : "yt-seoul-rail-cam",
-    "isLandmark" : false,
-    "name" : "Seoul Rail Cam",
-    "source" : "YouTube · Seoul Rail Live"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCLIfpAKG9uSJQ22UohNLHdA",
-    "city" : "New York",
-    "country" : "US",
-    "id" : "yt-upper-manhattan-skyline",
-    "isLandmark" : false,
-    "name" : "Upper Manhattan Skyline",
-    "source" : "YouTube · SimplyCoolViews"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCRjMuOBDCfSsCNIe2p0_tdg",
-    "country" : "NL",
-    "id" : "yt-caribbean-beach-cams",
-    "isLandmark" : false,
-    "name" : "Caribbean Beach Cams",
-    "source" : "YouTube · SHOWME Caribbean"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UC9-7NK79k1yRDvY6w2QHw8w",
-    "city" : "Panama City Beach",
-    "country" : "US",
-    "id" : "yt-panama-city-beach",
-    "isLandmark" : false,
-    "name" : "Panama City Beach",
-    "source" : "YouTube · Beach TV - Panama City Beach"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UClInMt1BNl9iBLl8HCLvcKA",
-    "city" : "Fort Walton Beach",
-    "country" : "US",
-    "id" : "yt-okaloosa-island",
-    "isLandmark" : false,
-    "name" : "Okaloosa Island",
-    "source" : "YouTube · Wyndham Garden Fort Walton Beach - Destin Hotel, FL"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCj0wW84FJvt3i_gAI8RdRkg",
-    "city" : "Chicago",
-    "country" : "US",
-    "id" : "yt-downtown-chicago",
-    "isLandmark" : true,
-    "name" : "Downtown Chicago",
-    "source" : "YouTube · ChicagoLoopLive"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCS03bU2sY5_zu2j7LoSjAVA",
-    "city" : "Sydney",
-    "country" : "AU",
-    "id" : "yt-sydney-harbour",
-    "isLandmark" : true,
-    "name" : "Sydney Harbour",
-    "source" : "YouTube · Sydney Harbour LIVE"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UC-bPJdfIq5zqIP_PQ7rUJaA",
-    "city" : "Northwood",
-    "country" : "US",
-    "id" : "yt-northwood-railcam-ohio",
-    "isLandmark" : false,
-    "name" : "Northwood Railcam, Ohio",
-    "source" : "YouTube · Railstream"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCaG0IHN1RMOZ4-U3wDXAkwA",
-    "city" : "Semeru",
-    "country" : "ID",
-    "id" : "yt-mount-semeru-volcano",
-    "isLandmark" : false,
-    "name" : "Mount Semeru Volcano",
-    "source" : "YouTube · afarTV"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UC8Y5mMpRMNLlLWXM3BUKy6Q",
-    "city" : "Tokyo",
-    "country" : "JP",
-    "id" : "yt-tokyo-bay",
-    "isLandmark" : true,
-    "name" : "Tokyo Bay",
-    "source" : "YouTube · HMTV | Tokyo Bay Live & Archive"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCXY7E6QRZ1o3n3zHCSr2kEg",
-    "city" : "Las Vegas",
-    "country" : "US",
-    "id" : "yt-fremont-street",
-    "isLandmark" : false,
-    "name" : "Fremont Street",
-    "source" : "YouTube · Justin Clouse"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCEoWbLkE7SZ46OSxYzGv_FQ",
-    "city" : "Tokyo",
-    "country" : "JP",
-    "id" : "yt-ochanomizu-tokyo",
-    "isLandmark" : false,
-    "name" : "Ochanomizu, Tokyo",
-    "source" : "YouTube · 東京御茶ノ水ライブ"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCm6mr9SHkImBqkWUICwmOgA",
-    "city" : "Peruíbe",
-    "country" : "BR",
-    "id" : "yt-peru-be-fish-market",
-    "isLandmark" : false,
-    "name" : "Peruíbe Fish Market",
-    "source" : "YouTube · Lente Livre - Peruíbe ao Vivo"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCgtAAzMRP9ok3Cv0ZyxtJPQ",
-    "city" : "Panama City",
-    "country" : "PA",
-    "id" : "yt-panama-city",
-    "isLandmark" : true,
-    "name" : "Panama City",
-    "source" : "YouTube · Panama City Live Cam"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UC_cmEauzsnJ4trDXLiIug1Q",
-    "city" : "Koh Samui",
-    "country" : "TH",
-    "id" : "yt-koh-samui-beach-club",
-    "isLandmark" : false,
-    "name" : "Koh Samui Beach Club",
-    "source" : "YouTube · STREETS OF THAILAND"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCd_j7Zc1KmjHkVyvNIySehQ",
-    "city" : "Kyoto",
-    "country" : "JP",
-    "id" : "yt-kyoto-station",
-    "isLandmark" : true,
-    "name" : "Kyoto Station",
-    "source" : "YouTube · JR京都駅ライブカメラ(JR Kyoto Station LiveCam)"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCeh-xpdolXxtC7ey15ccW-g",
-    "city" : "Singapore",
-    "country" : "SG",
-    "id" : "yt-singapore-port",
-    "isLandmark" : true,
-    "name" : "Singapore Port",
-    "source" : "YouTube · Christoph Burgdorfer"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCU31-9qcY1RDuMad67dbuhw",
-    "city" : "Tamási",
-    "country" : "HU",
-    "id" : "yt-tam-si-wildlife-cams",
-    "isLandmark" : false,
-    "name" : "Tamási Wildlife Cams",
-    "source" : "YouTube · Madarles - Live Bird Cams"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCxdkv0StDfmn1dXWStAt2tw",
-    "city" : "Stockholm",
-    "country" : "SE",
-    "id" : "yt-stockholm-city",
-    "isLandmark" : true,
-    "name" : "Stockholm City",
-    "source" : "YouTube · Flaming Fire"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCuGJHbJLvVW2JqKNzhBSu6g",
-    "city" : "Los Angeles",
-    "country" : "US",
-    "id" : "yt-downtown-los-angeles",
-    "isLandmark" : true,
-    "name" : "Downtown Los Angeles",
-    "source" : "YouTube · DTLA Live Feed"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCf6fbt2V_PXTFtdg1fruTDA",
-    "city" : "Muizenberg",
-    "country" : "ZA",
-    "id" : "yt-muizenberg-surf",
-    "isLandmark" : false,
-    "name" : "Muizenberg Surf",
-    "source" : "YouTube · Muizenberg Wave Watchers"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCdMUgj9aXg5rBjw3ep8R7Pg",
-    "city" : "San Diego",
-    "country" : "US",
-    "id" : "yt-la-jolla-beach",
-    "isLandmark" : false,
-    "name" : "La Jolla Beach",
-    "source" : "YouTube · Earth Watch Live"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCOQmNYa1iIDcZl-z6duqCww",
-    "city" : "Pattaya",
-    "country" : "TH",
-    "id" : "yt-pattaya-beach",
-    "isLandmark" : false,
-    "name" : "Pattaya Beach",
-    "source" : "YouTube · SOUTH PATTAYA LIVE CAM"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCp9GTN_c8PTo_YmGSEip7Mg",
-    "city" : "Davao",
-    "country" : "PH",
-    "id" : "yt-agdao-market-davao",
-    "isLandmark" : false,
-    "name" : "Agdao Market, Davao",
-    "source" : "YouTube · Lang.x Philippines"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCFiKd2rBxNjcQIeXmqj5rvQ",
-    "city" : "Hampton Bays",
-    "country" : "US",
-    "id" : "yt-hamptons-cams",
-    "isLandmark" : false,
-    "name" : "Hamptons Cams",
-    "source" : "YouTube · Hamptons Weather Live"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCoFUleuZUyRUVDjO4JcCSTQ",
-    "city" : "San Francisco",
-    "country" : "US",
-    "id" : "yt-castro-street-1",
-    "isLandmark" : false,
-    "name" : "Castro Street 1",
-    "source" : "YouTube · Castro Street Cam 1"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCVPMAdvP_2BvrBr3JnB1gPw",
-    "city" : "New York",
-    "country" : "US",
-    "id" : "yt-brooklyn-waterfront",
-    "isLandmark" : true,
-    "name" : "Brooklyn Waterfront",
-    "source" : "YouTube · Brooklyn Waterfront Cams"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCu6usOxLQR8CckyPE7Ri-SQ",
-    "city" : "Kuala Lumpur",
-    "country" : "MY",
-    "id" : "yt-kuala-lumpur",
-    "isLandmark" : true,
-    "name" : "Kuala Lumpur",
-    "source" : "YouTube · KL Atmosphere Daily"
-  },
-  {
-    "category" : "beach",
+    "category" : "scenery",
     "channelId" : "UC029bcZGqxOsRkvWrZLhgKQ",
     "city" : "Pacifica",
     "country" : "US",
@@ -727,569 +210,77 @@
     "source" : "YouTube · Chamberlin Nature"
   },
   {
-    "category" : "cityscape",
-    "channelId" : "UCsXOwro8CHI2FWotcTw1U2w",
-    "city" : "Buenos Aires",
-    "country" : "AR",
-    "id" : "yt-buenos-aires",
+    "category" : "scenery",
+    "channelId" : "UCUlMJzaHTOnN30KG4j8CGyQ",
+    "city" : "Killington",
+    "country" : "US",
+    "id" : "yt-vermont-ski-resorts",
+    "isLandmark" : false,
+    "name" : "Vermont Ski Resorts",
+    "source" : "YouTube · VermontLiveCam"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCf6fbt2V_PXTFtdg1fruTDA",
+    "city" : "Muizenberg",
+    "country" : "ZA",
+    "id" : "yt-muizenberg-surf",
+    "isLandmark" : false,
+    "name" : "Muizenberg Surf",
+    "source" : "YouTube · Muizenberg Wave Watchers"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCG-Icsd_kbKnt9QraydFQPQ",
+    "city" : "London",
+    "country" : "GB",
+    "id" : "yt-london-bridge-thames",
     "isLandmark" : true,
-    "name" : "Buenos Aires",
-    "source" : "YouTube · Paseos y Turismo"
+    "name" : "London Bridge & Thames",
+    "source" : "YouTube · Beach Life Cams"
   },
   {
-    "category" : "cityscape",
-    "channelId" : "UC4kQy5CW1gvNtm09ilf6XBQ",
-    "city" : "Seoul",
-    "country" : "KR",
-    "id" : "yt-mapo-bridge",
-    "isLandmark" : false,
-    "name" : "Mapo Bridge",
-    "source" : "YouTube · GiGAeyesliveTV City View"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCx7zzwIrKhGT3ybapASPXAQ",
-    "city" : "Hampton Bays",
-    "country" : "US",
-    "id" : "yt-shinnecock-dock",
-    "isLandmark" : false,
-    "name" : "Shinnecock Dock",
-    "source" : "YouTube · Hamptons Bay & Harbor Cams"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCrk_nl_0APWBYukMck4o9Dw",
-    "city" : "Sarajevo",
-    "country" : "BA",
-    "id" : "yt-sarajevo",
-    "isLandmark" : true,
-    "name" : "Sarajevo",
-    "source" : "YouTube · Live Sarajevo 4K"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCUkUjr4syovc3NbLWtuVfYw",
-    "city" : "Fort Lauderdale",
-    "country" : "US",
-    "id" : "yt-fort-lauderdale-beach",
-    "isLandmark" : false,
-    "name" : "Fort Lauderdale Beach",
-    "source" : "YouTube · Elbo Room (Home of ElboTV)"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCEygf-LdoEeUlwFo_J-XM6Q",
-    "city" : "Kamakura",
-    "country" : "JP",
-    "id" : "yt-kamakura-coast",
-    "isLandmark" : false,
-    "name" : "Kamakura Coast",
-    "source" : "YouTube · 峰ヒルズcam"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCZkETwsAfT_cF6BEJt1fC3w",
-    "city" : "Panama City Beach",
-    "country" : "US",
-    "id" : "yt-panama-city-beach-gulf",
-    "isLandmark" : false,
-    "name" : "Panama City Beach Gulf",
-    "source" : "YouTube · Runaway Island in Panama City Beach"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCvA3BSSjkKRCgam736w0ggA",
-    "city" : "Sandusky",
-    "country" : "US",
-    "id" : "yt-sandusky-railcam-ohio",
-    "isLandmark" : false,
-    "name" : "Sandusky Railcam, Ohio",
-    "source" : "YouTube · The Traveling Gandy Dancer"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCCs9Fy2QlMXah1JPxRs9Xdw",
-    "city" : "Las Vegas",
-    "country" : "US",
-    "id" : "yt-las-vegas-civic-center",
-    "isLandmark" : false,
-    "name" : "Las Vegas Civic Center",
-    "source" : "YouTube · City of Las Vegas TV"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCNOXlPIEg4nNvCqlInpKcXw",
-    "city" : "Vancouver",
-    "country" : "CA",
-    "id" : "yt-vancouver-port",
-    "isLandmark" : true,
-    "name" : "Vancouver Port",
-    "source" : "YouTube · Vancouver Port Live"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCwAlED5GCrvDuDu-OhfiUIg",
-    "country" : "US",
-    "id" : "yt-backyard-deer-cam",
-    "isLandmark" : false,
-    "name" : "Backyard Deer Cam",
-    "source" : "YouTube · Molly on the Move"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCtYsvC0X0heHxF-IUtsQzTQ",
-    "city" : "Lake Havasu",
-    "country" : "US",
-    "id" : "yt-lake-havasu",
-    "isLandmark" : false,
-    "name" : "Lake Havasu",
-    "source" : "YouTube · ProwatercraftCOM"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCUj55rARHd9It-rQlGYtU1Q",
-    "city" : "Hornell",
-    "country" : "US",
-    "id" : "yt-canisteo-river",
-    "isLandmark" : false,
-    "name" : "Canisteo River",
-    "source" : "YouTube · onefish26"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCaxxRyMskvvbpQMo-VJpNhw",
-    "city" : "Tokyo",
-    "country" : "JP",
-    "id" : "yt-odaiba-beach",
-    "isLandmark" : false,
-    "name" : "Odaiba Beach",
-    "source" : "YouTube · EN DAIBA GLOBAL"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UClSdxxEoPbpZHrujhfQcdow",
+    "category" : "street",
+    "channelId" : "UCoFUleuZUyRUVDjO4JcCSTQ",
     "city" : "San Francisco",
     "country" : "US",
-    "id" : "yt-castro-street-2",
+    "id" : "yt-castro-street-1",
     "isLandmark" : false,
-    "name" : "Castro Street 2",
-    "source" : "YouTube · Castro Street Cam 2"
+    "name" : "Castro Street 1",
+    "source" : "YouTube · Castro Street Cam 1"
   },
   {
-    "category" : "beach",
-    "channelId" : "UCLwTi-vM5zaadH1ytPo-rTg",
-    "city" : "Gordon's Bay",
-    "country" : "ZA",
-    "id" : "yt-gordon-s-bay",
-    "isLandmark" : false,
-    "name" : "Gordon's Bay",
-    "source" : "YouTube · Cape Ocean Adventures"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCpb8WxAsZPIwaAsNbbKLzmg",
-    "city" : "Atlantic City",
-    "country" : "US",
-    "id" : "yt-atlantic-city-boardwalk",
-    "isLandmark" : false,
-    "name" : "Atlantic City Boardwalk",
-    "source" : "YouTube · ms36K"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCC7FQevLjRzajxhGb989szw",
-    "city" : "Miami",
-    "country" : "US",
-    "id" : "yt-miami-traffic",
-    "isLandmark" : false,
-    "name" : "Miami Traffic",
-    "source" : "YouTube · Florida Traffic"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCYiCCZin0P_evnq3y1TOjzQ",
-    "city" : "Cajon Pass",
-    "country" : "US",
-    "id" : "yt-cajon-pass",
-    "isLandmark" : false,
-    "name" : "Cajon Pass",
-    "source" : "YouTube · RRphotographer"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCWEAz9ABCPn3aCZlDBECAZw",
-    "country" : "AU",
-    "id" : "yt-australian-bird-feeder",
-    "isLandmark" : false,
-    "name" : "Australian Bird Feeder",
-    "source" : "YouTube · AussieBirdHarmony"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCBVNLnTUkBWfcQuUXvaSEUw",
-    "city" : "Hanoi",
-    "country" : "VN",
-    "id" : "yt-hanoi",
+    "category" : "street",
+    "channelId" : "UCgtAAzMRP9ok3Cv0ZyxtJPQ",
+    "city" : "Panama City",
+    "country" : "PA",
+    "id" : "yt-panama-city",
     "isLandmark" : true,
-    "name" : "Hanoi",
-    "source" : "YouTube · Ha Noi Live Cam"
+    "name" : "Panama City",
+    "source" : "YouTube · Panama City Live Cam"
   },
   {
-    "category" : "cityscape",
-    "channelId" : "UC_JDyw-vsFmwJ35tojTiFeA",
-    "city" : "Valletta",
-    "country" : "MT",
-    "id" : "yt-malta-skyline",
-    "isLandmark" : false,
-    "name" : "Malta Skyline",
-    "source" : "YouTube · Birds Eye View Malta"
+    "category" : "scenery",
+    "channelId" : "UC8Y5mMpRMNLlLWXM3BUKy6Q",
+    "city" : "Tokyo",
+    "country" : "JP",
+    "id" : "yt-tokyo-bay",
+    "isLandmark" : true,
+    "name" : "Tokyo Bay",
+    "source" : "YouTube · HMTV | Tokyo Bay Live & Archive"
   },
   {
-    "category" : "scenic",
-    "channelId" : "UCJId-kbfsO5K4kU9cKE_TqA",
-    "city" : "Charlotte",
-    "country" : "US",
-    "id" : "yt-charlotte-railcam-michigan",
-    "isLandmark" : false,
-    "name" : "Charlotte Railcam, Michigan",
-    "source" : "YouTube · Steel Highway Railcams"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCBA0Mp1Sfg8VW9D3XcswIMA",
-    "city" : "Harbour Island",
-    "country" : "BS",
-    "id" : "yt-harbour-island-bahamas",
-    "isLandmark" : false,
-    "name" : "Harbour Island, Bahamas",
-    "source" : "YouTube · LIVE SUNRISE AND SUNSETS IN HARBOUR ISLAND BAHAMAS"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UC8YUfWLPR2Csqdb_ucphesA",
+    "category" : "scenery",
+    "channelId" : "UCLIfpAKG9uSJQ22UohNLHdA",
     "city" : "New York",
     "country" : "US",
-    "id" : "yt-prospect-park",
+    "id" : "yt-upper-manhattan-skyline",
     "isLandmark" : false,
-    "name" : "Prospect Park",
-    "source" : "YouTube · Prospect Park Live"
+    "name" : "Upper Manhattan Skyline",
+    "source" : "YouTube · SimplyCoolViews"
   },
   {
-    "category" : "scenic",
-    "channelId" : "UCfFIv0FTqKR0vsIh94zZj2g",
-    "city" : "Kyoto",
-    "country" : "JP",
-    "id" : "yt-kyoto-keihoku",
-    "isLandmark" : false,
-    "name" : "Kyoto Keihoku",
-    "source" : "YouTube · 京都府京都市右京区京北周山町ライブカメラ"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCOYc_DmojcPy7o1O9_0BBUw",
-    "city" : "Houston",
-    "country" : "US",
-    "id" : "yt-downtown-houston",
-    "isLandmark" : true,
-    "name" : "Downtown Houston",
-    "source" : "YouTube · Space City Live Cam"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UC5QS5tu4a6I4wncjennVxHQ",
-    "country" : "US",
-    "id" : "yt-backyard-critter-cam",
-    "isLandmark" : false,
-    "name" : "Backyard Critter Cam",
-    "source" : "YouTube · Critter Cam TV-ch67"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCb3t1WM7PlQPyFhno5DFYwA",
-    "city" : "Gull Lake",
-    "country" : "US",
-    "id" : "yt-gull-lake",
-    "isLandmark" : false,
-    "name" : "Gull Lake",
-    "source" : "YouTube · Gull Lake LIVE WEBCAMS"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCNj9RYj1GJLP9WvtEiYHHEw",
-    "city" : "Benidorm",
-    "country" : "ES",
-    "id" : "yt-benidorm-skyline",
-    "isLandmark" : false,
-    "name" : "Benidorm Skyline",
-    "source" : "YouTube · Benidorm Skyline Live"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCoxZcAinAWtvq3Ff-iEDnew",
-    "city" : "Peruíbe",
-    "country" : "BR",
-    "id" : "yt-peru-be-coast",
-    "isLandmark" : false,
-    "name" : "Peruíbe Coast",
-    "source" : "YouTube · Lente Livre - Litoral Sul São Paulo"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCWNdc7wI92h6DlvZPUEPPJQ",
-    "city" : "Heide",
-    "country" : "DE",
-    "id" : "yt-heide-birdbox-germany",
-    "isLandmark" : false,
-    "name" : "Heide Birdbox, Germany",
-    "source" : "YouTube · Rixxel"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCH0VVepamGEc7ovAEAJPmWQ",
-    "city" : "Los Angeles",
-    "country" : "US",
-    "id" : "yt-downtown-la-skyline",
-    "isLandmark" : false,
-    "name" : "Downtown LA Skyline",
-    "source" : "YouTube · Dcline One"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UC5VszwtxcvKXiXfNXRMI70Q",
-    "city" : "Seal Beach",
-    "country" : "US",
-    "id" : "yt-seal-beach-marina",
-    "isLandmark" : false,
-    "name" : "Seal Beach Marina",
-    "source" : "YouTube · CODE 20 LIVE CAMS"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UC8gbWbcNNyb5-NIXvFklkOA",
-    "city" : "Greenville",
-    "country" : "US",
-    "id" : "yt-big-moose-mountain",
-    "isLandmark" : false,
-    "name" : "Big Moose Mountain",
-    "source" : "YouTube · Boston and Maine Live"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCWuoYuUza2qNg4L2Di-rZsA",
-    "city" : "Berneray",
-    "country" : "GB",
-    "id" : "yt-berneray-east-beach",
-    "isLandmark" : false,
-    "name" : "Berneray East Beach",
-    "source" : "YouTube · East Beach Berneray"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCDA7I-sBCvrcVHTd8cZqSYg",
-    "city" : "Tampa",
-    "country" : "US",
-    "id" : "yt-tampa-beach",
-    "isLandmark" : false,
-    "name" : "Tampa Beach",
-    "source" : "YouTube · The Tampa Channel"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCUyHh9bRlaPmQPuZ8B4Mt8A",
-    "city" : "Big Bear",
-    "country" : "US",
-    "id" : "yt-big-bear-mountain",
-    "isLandmark" : false,
-    "name" : "Big Bear Mountain",
-    "source" : "YouTube · Socalmountains"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCEGtTnZoEFhF8NVF6-yps2Q",
-    "city" : "Kameoka",
-    "country" : "JP",
-    "id" : "yt-kameoka-kyoto",
-    "isLandmark" : false,
-    "name" : "Kameoka, Kyoto",
-    "source" : "YouTube · 京都府亀岡市大井町並河ライブカメラ"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCzdWPo-cHlPs4DPvpIH9Z3w",
-    "city" : "Miramar Beach",
-    "country" : "US",
-    "id" : "yt-miramar-beach",
-    "isLandmark" : false,
-    "name" : "Miramar Beach",
-    "source" : "YouTube · La Dolce Vita"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCsy6UOjk8q7Ajq9yQ7iDAbA",
-    "city" : "Busan",
-    "country" : "KR",
-    "id" : "yt-songjeong-beach-busan",
-    "isLandmark" : false,
-    "name" : "Songjeong Beach, Busan",
-    "source" : "YouTube · GiGAeyes Live TV"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCMS9Cn3rrAm7Sg_Ku5aWTCA",
-    "country" : "US",
-    "id" : "yt-arizona-desert-cam",
-    "isLandmark" : false,
-    "name" : "Arizona Desert Cam",
-    "source" : "YouTube · Jimwest1980"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UC3DCb0LxBCMkMHbu9f6P4sQ",
-    "city" : "Wolfeboro",
-    "country" : "US",
-    "id" : "yt-wolfeboro-downtown",
-    "isLandmark" : false,
-    "name" : "Wolfeboro Downtown",
-    "source" : "YouTube · Wolfeboro Bay Real Estate"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCAIhA0xG7iIwaYnUDP95C3w",
-    "city" : "Green Lake",
-    "country" : "US",
-    "id" : "yt-green-lake-weather-cam",
-    "isLandmark" : false,
-    "name" : "Green Lake Weather Cam",
-    "source" : "YouTube · Paul Couture"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCeYgipfMsfisw0XxXVzbyOA",
-    "city" : "Fort Myers Beach",
-    "country" : "US",
-    "id" : "yt-fort-myers-beach",
-    "isLandmark" : false,
-    "name" : "Fort Myers Beach",
-    "source" : "YouTube · Margaritaville Beach Resort Fort Myers Beach"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCjjPsCV7_2yxPEfpU6izf1w",
-    "city" : "Airlie Beach",
-    "country" : "AU",
-    "id" : "yt-airlie-beach",
-    "isLandmark" : false,
-    "name" : "Airlie Beach",
-    "source" : "YouTube · Whitsunday Reflections"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCzbydNAcB7jeJGssRFb_dCA",
-    "country" : "IL",
-    "id" : "yt-israel-birdcams",
-    "isLandmark" : false,
-    "name" : "Israel Birdcams",
-    "source" : "YouTube · Charter Group Birdcams ציפורים אונליין קבוצת צ'רטר"
-  },
-  {
-    "category" : "beach",
-    "channelId" : "UCwNWi3cIOuzJNvQgS74lspQ",
-    "city" : "Cancún",
-    "country" : "MX",
-    "id" : "yt-canc-n-beach",
-    "isLandmark" : true,
-    "name" : "Cancún Beach",
-    "source" : "YouTube · Hoteles Solaris"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UC-52ACkTFkgPZ0qbLtNhalg",
-    "city" : "Presidente Prudente",
-    "country" : "BR",
-    "id" : "yt-presidente-prudente",
-    "isLandmark" : false,
-    "name" : "Presidente Prudente",
-    "source" : "YouTube · Prudente 24h"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCFbd69s_b63mA7qvpnG6U8Q",
-    "country" : "US",
-    "id" : "yt-news-8-now-city-cam",
-    "isLandmark" : false,
-    "name" : "News 8 Now City Cam",
-    "source" : "YouTube · News 8 Now City Cam"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCqH_TI67yWOokRzZi5g1fMg",
-    "city" : "Somerset",
-    "country" : "US",
-    "id" : "yt-lake-cumberland",
-    "isLandmark" : false,
-    "name" : "Lake Cumberland",
-    "source" : "YouTube · FOX 56 News"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCcsDxb9OLIDXoNkCxoSdYBA",
-    "country" : "US",
-    "id" : "yt-blue-ridge-songbird-porch",
-    "isLandmark" : false,
-    "name" : "Blue Ridge Songbird Porch",
-    "source" : "YouTube · The Robertson Rottie Ranch"
-  },
-  {
-    "category" : "nature",
-    "channelId" : "UCscOlRk7xHJZGAKJYvPAFaA",
-    "country" : "BR",
-    "id" : "yt-brazil-farm-pond",
-    "isLandmark" : false,
-    "name" : "Brazil Farm & Pond",
-    "source" : "YouTube · Vida na Roça Brazil Live Cam Wildlife Nature"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCAjAwOKrfmZX1552JnE_i5g",
-    "city" : "Olinda",
-    "country" : "BR",
-    "id" : "yt-olinda-brazil",
-    "isLandmark" : false,
-    "name" : "Olinda, Brazil",
-    "source" : "YouTube · Tá ao vivo"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCRj7u6fmW8RYQl98hcwbwng",
-    "city" : "Breda",
-    "country" : "NL",
-    "id" : "yt-breda-airport",
-    "isLandmark" : false,
-    "name" : "Breda Airport",
-    "source" : "YouTube · Joseph Shenouda"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCUu85f--8fOKrjMCyYa5KkA",
-    "city" : "Southfield",
-    "country" : "US",
-    "id" : "yt-southfield-city-cam",
-    "isLandmark" : false,
-    "name" : "Southfield City Cam",
-    "source" : "YouTube · Southfield Cable 15"
-  },
-  {
-    "category" : "cityscape",
-    "channelId" : "UCp8FhsgzNmYR6F1HxTDMTvw",
-    "city" : "Kathmandu",
-    "country" : "NP",
-    "id" : "yt-kathmandu",
-    "isLandmark" : true,
-    "name" : "Kathmandu",
-    "source" : "YouTube · WEBCAM NEPAL CITIES & TOWNS"
-  },
-  {
-    "category" : "beach",
+    "category" : "scenery",
     "channelId" : "UCA6cQSBQbkxUO6gO_nXfibg",
     "city" : "Puerto Vallarta",
     "country" : "MX",
@@ -1299,7 +290,356 @@
     "source" : "YouTube · La Palapa Restaurant"
   },
   {
-    "category" : "cityscape",
+    "category" : "street",
+    "channelId" : "UCXY7E6QRZ1o3n3zHCSr2kEg",
+    "city" : "Las Vegas",
+    "country" : "US",
+    "id" : "yt-fremont-street",
+    "isLandmark" : false,
+    "name" : "Fremont Street",
+    "source" : "YouTube · Justin Clouse"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCRjMuOBDCfSsCNIe2p0_tdg",
+    "country" : "NL",
+    "id" : "yt-caribbean-beach-cams",
+    "isLandmark" : false,
+    "name" : "Caribbean Beach Cams",
+    "source" : "YouTube · SHOWME Caribbean"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCZ6ZuSqeKrjFP7w9lS0nx0Q",
+    "city" : "Davao",
+    "country" : "PH",
+    "id" : "yt-davao-public-market",
+    "isLandmark" : false,
+    "name" : "Davao Public Market",
+    "source" : "YouTube · Maria Deseo - Philippines Live Webcam"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCEoWbLkE7SZ46OSxYzGv_FQ",
+    "city" : "Tokyo",
+    "country" : "JP",
+    "id" : "yt-ochanomizu-tokyo",
+    "isLandmark" : false,
+    "name" : "Ochanomizu, Tokyo",
+    "source" : "YouTube · 東京御茶ノ水ライブ"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UC3ppRbUdj-XrSIn-6YHGP3w",
+    "city" : "Portsmouth",
+    "country" : "GB",
+    "id" : "yt-hms-warrior-portsmouth",
+    "isLandmark" : false,
+    "name" : "HMS Warrior, Portsmouth",
+    "source" : "YouTube · Royal Navy Museums"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCm6mr9SHkImBqkWUICwmOgA",
+    "city" : "Peruíbe",
+    "country" : "BR",
+    "id" : "yt-peru-be-fish-market",
+    "isLandmark" : false,
+    "name" : "Peruíbe Fish Market",
+    "source" : "YouTube · Lente Livre - Peruíbe ao Vivo"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCj0wW84FJvt3i_gAI8RdRkg",
+    "city" : "Chicago",
+    "country" : "US",
+    "id" : "yt-downtown-chicago",
+    "isLandmark" : true,
+    "name" : "Downtown Chicago",
+    "source" : "YouTube · ChicagoLoopLive"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCS03bU2sY5_zu2j7LoSjAVA",
+    "city" : "Sydney",
+    "country" : "AU",
+    "id" : "yt-sydney-harbour",
+    "isLandmark" : true,
+    "name" : "Sydney Harbour",
+    "source" : "YouTube · Sydney Harbour LIVE"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCxdkv0StDfmn1dXWStAt2tw",
+    "city" : "Stockholm",
+    "country" : "SE",
+    "id" : "yt-stockholm-city",
+    "isLandmark" : true,
+    "name" : "Stockholm City",
+    "source" : "YouTube · Flaming Fire"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCaG0IHN1RMOZ4-U3wDXAkwA",
+    "city" : "Semeru",
+    "country" : "ID",
+    "id" : "yt-mount-semeru-volcano",
+    "isLandmark" : false,
+    "name" : "Mount Semeru Volcano",
+    "source" : "YouTube · afarTV"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCuGJHbJLvVW2JqKNzhBSu6g",
+    "city" : "Los Angeles",
+    "country" : "US",
+    "id" : "yt-downtown-los-angeles",
+    "isLandmark" : true,
+    "name" : "Downtown Los Angeles",
+    "source" : "YouTube · DTLA Live Feed"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCeYgipfMsfisw0XxXVzbyOA",
+    "city" : "Fort Myers Beach",
+    "country" : "US",
+    "id" : "yt-fort-myers-beach",
+    "isLandmark" : false,
+    "name" : "Fort Myers Beach",
+    "source" : "YouTube · Margaritaville Beach Resort Fort Myers Beach"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCsXOwro8CHI2FWotcTw1U2w",
+    "city" : "Buenos Aires",
+    "country" : "AR",
+    "id" : "yt-buenos-aires",
+    "isLandmark" : true,
+    "name" : "Buenos Aires",
+    "source" : "YouTube · Paseos y Turismo"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCPNkrps0FeHFXthbVjR0nlA",
+    "city" : "Costa Teguise",
+    "country" : "ES",
+    "id" : "yt-lanzarote-beach-bar",
+    "isLandmark" : false,
+    "name" : "Lanzarote Beach Bar",
+    "source" : "YouTube · Beach Bar Lanzarote"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCmYyJaUxYiF5IbLx-0jFXHQ",
+    "city" : "Koh Samui",
+    "country" : "TH",
+    "id" : "yt-lamai-beach-koh-samui",
+    "isLandmark" : false,
+    "name" : "Lamai Beach, Koh Samui",
+    "source" : "YouTube · The Real Samui Webcam"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCu6usOxLQR8CckyPE7Ri-SQ",
+    "city" : "Kuala Lumpur",
+    "country" : "MY",
+    "id" : "yt-kuala-lumpur",
+    "isLandmark" : true,
+    "name" : "Kuala Lumpur",
+    "source" : "YouTube · KL Atmosphere Daily"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCOQmNYa1iIDcZl-z6duqCww",
+    "city" : "Pattaya",
+    "country" : "TH",
+    "id" : "yt-pattaya-beach",
+    "isLandmark" : false,
+    "name" : "Pattaya Beach",
+    "source" : "YouTube · SOUTH PATTAYA LIVE CAM"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UC_cmEauzsnJ4trDXLiIug1Q",
+    "city" : "Koh Samui",
+    "country" : "TH",
+    "id" : "yt-koh-samui-beach-club",
+    "isLandmark" : false,
+    "name" : "Koh Samui Beach Club",
+    "source" : "YouTube · STREETS OF THAILAND"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCVPMAdvP_2BvrBr3JnB1gPw",
+    "city" : "New York",
+    "country" : "US",
+    "id" : "yt-brooklyn-waterfront",
+    "isLandmark" : true,
+    "name" : "Brooklyn Waterfront",
+    "source" : "YouTube · Brooklyn Waterfront Cams"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UClSdxxEoPbpZHrujhfQcdow",
+    "city" : "San Francisco",
+    "country" : "US",
+    "id" : "yt-castro-street-2",
+    "isLandmark" : false,
+    "name" : "Castro Street 2",
+    "source" : "YouTube · Castro Street Cam 2"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UC-52ACkTFkgPZ0qbLtNhalg",
+    "city" : "Presidente Prudente",
+    "country" : "BR",
+    "id" : "yt-presidente-prudente",
+    "isLandmark" : false,
+    "name" : "Presidente Prudente",
+    "source" : "YouTube · Prudente 24h"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCUkUjr4syovc3NbLWtuVfYw",
+    "city" : "Fort Lauderdale",
+    "country" : "US",
+    "id" : "yt-fort-lauderdale-beach",
+    "isLandmark" : false,
+    "name" : "Fort Lauderdale Beach",
+    "source" : "YouTube · Elbo Room (Home of ElboTV)"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UC8YUfWLPR2Csqdb_ucphesA",
+    "city" : "New York",
+    "country" : "US",
+    "id" : "yt-prospect-park",
+    "isLandmark" : false,
+    "name" : "Prospect Park",
+    "source" : "YouTube · Prospect Park Live"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCeh-xpdolXxtC7ey15ccW-g",
+    "city" : "Singapore",
+    "country" : "SG",
+    "id" : "yt-singapore-port",
+    "isLandmark" : true,
+    "name" : "Singapore Port",
+    "source" : "YouTube · Christoph Burgdorfer"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCCs9Fy2QlMXah1JPxRs9Xdw",
+    "city" : "Las Vegas",
+    "country" : "US",
+    "id" : "yt-las-vegas-civic-center",
+    "isLandmark" : false,
+    "name" : "Las Vegas Civic Center",
+    "source" : "YouTube · City of Las Vegas TV"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UC3DCb0LxBCMkMHbu9f6P4sQ",
+    "city" : "Wolfeboro",
+    "country" : "US",
+    "id" : "yt-wolfeboro-downtown",
+    "isLandmark" : false,
+    "name" : "Wolfeboro Downtown",
+    "source" : "YouTube · Wolfeboro Bay Real Estate"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCp9GTN_c8PTo_YmGSEip7Mg",
+    "city" : "Davao",
+    "country" : "PH",
+    "id" : "yt-agdao-market-davao",
+    "isLandmark" : false,
+    "name" : "Agdao Market, Davao",
+    "source" : "YouTube · Lang.x Philippines"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCUj55rARHd9It-rQlGYtU1Q",
+    "city" : "Hornell",
+    "country" : "US",
+    "id" : "yt-canisteo-river",
+    "isLandmark" : false,
+    "name" : "Canisteo River",
+    "source" : "YouTube · onefish26"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCaxxRyMskvvbpQMo-VJpNhw",
+    "city" : "Tokyo",
+    "country" : "JP",
+    "id" : "yt-odaiba-beach",
+    "isLandmark" : false,
+    "name" : "Odaiba Beach",
+    "source" : "YouTube · EN DAIBA GLOBAL"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCrk_nl_0APWBYukMck4o9Dw",
+    "city" : "Sarajevo",
+    "country" : "BA",
+    "id" : "yt-sarajevo",
+    "isLandmark" : true,
+    "name" : "Sarajevo",
+    "source" : "YouTube · Live Sarajevo 4K"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCEygf-LdoEeUlwFo_J-XM6Q",
+    "city" : "Kamakura",
+    "country" : "JP",
+    "id" : "yt-kamakura-coast",
+    "isLandmark" : false,
+    "name" : "Kamakura Coast",
+    "source" : "YouTube · 峰ヒルズcam"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCwNWi3cIOuzJNvQgS74lspQ",
+    "city" : "Cancún",
+    "country" : "MX",
+    "id" : "yt-canc-n-beach",
+    "isLandmark" : true,
+    "name" : "Cancún Beach",
+    "source" : "YouTube · Hoteles Solaris"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCBVNLnTUkBWfcQuUXvaSEUw",
+    "city" : "Hanoi",
+    "country" : "VN",
+    "id" : "yt-hanoi",
+    "isLandmark" : true,
+    "name" : "Hanoi",
+    "source" : "YouTube · Ha Noi Live Cam"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCdMUgj9aXg5rBjw3ep8R7Pg",
+    "city" : "San Diego",
+    "country" : "US",
+    "id" : "yt-la-jolla-beach",
+    "isLandmark" : false,
+    "name" : "La Jolla Beach",
+    "source" : "YouTube · Earth Watch Live"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCEGtTnZoEFhF8NVF6-yps2Q",
+    "city" : "Kameoka",
+    "country" : "JP",
+    "id" : "yt-kameoka-kyoto",
+    "isLandmark" : false,
+    "name" : "Kameoka, Kyoto",
+    "source" : "YouTube · 京都府亀岡市大井町並河ライブカメラ"
+  },
+  {
+    "category" : "scenery",
     "channelId" : "UCnaT3HmPZJcBdIhNh1H3EWQ",
     "city" : "New York",
     "country" : "US",
@@ -1309,27 +649,146 @@
     "source" : "YouTube · RomNYC"
   },
   {
-    "category" : "cityscape",
-    "channelId" : "UCE5jk2omKe23EUKPJtHlzEg",
-    "city" : "Bucharest",
-    "country" : "RO",
-    "id" : "yt-bucharest-calea-victoriei",
-    "isLandmark" : true,
-    "name" : "Bucharest Calea Victoriei",
-    "source" : "YouTube · Caught on camera"
-  },
-  {
-    "category" : "scenic",
-    "channelId" : "UCjQ-ACqme7YS5FeGS75DIfg",
-    "city" : "Lake Travis",
-    "country" : "US",
-    "id" : "yt-lake-travis",
+    "category" : "scenery",
+    "channelId" : "UCLwTi-vM5zaadH1ytPo-rTg",
+    "city" : "Gordon's Bay",
+    "country" : "ZA",
+    "id" : "yt-gordon-s-bay",
     "isLandmark" : false,
-    "name" : "Lake Travis",
-    "source" : "YouTube · Lake Travis Lake Cam"
+    "name" : "Gordon's Bay",
+    "source" : "YouTube · Cape Ocean Adventures"
   },
   {
-    "category" : "cityscape",
+    "category" : "scenery",
+    "channelId" : "UC5VszwtxcvKXiXfNXRMI70Q",
+    "city" : "Seal Beach",
+    "country" : "US",
+    "id" : "yt-seal-beach-marina",
+    "isLandmark" : false,
+    "name" : "Seal Beach Marina",
+    "source" : "YouTube · CODE 20 LIVE CAMS"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCNOXlPIEg4nNvCqlInpKcXw",
+    "city" : "Vancouver",
+    "country" : "CA",
+    "id" : "yt-vancouver-port",
+    "isLandmark" : true,
+    "name" : "Vancouver Port",
+    "source" : "YouTube · Vancouver Port Live"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UC9-7NK79k1yRDvY6w2QHw8w",
+    "city" : "Panama City Beach",
+    "country" : "US",
+    "id" : "yt-panama-city-beach",
+    "isLandmark" : false,
+    "name" : "Panama City Beach",
+    "source" : "YouTube · Beach TV - Panama City Beach"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCpb8WxAsZPIwaAsNbbKLzmg",
+    "city" : "Atlantic City",
+    "country" : "US",
+    "id" : "yt-atlantic-city-boardwalk",
+    "isLandmark" : false,
+    "name" : "Atlantic City Boardwalk",
+    "source" : "YouTube · ms36K"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCtYsvC0X0heHxF-IUtsQzTQ",
+    "city" : "Lake Havasu",
+    "country" : "US",
+    "id" : "yt-lake-havasu",
+    "isLandmark" : false,
+    "name" : "Lake Havasu",
+    "source" : "YouTube · ProwatercraftCOM"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UClInMt1BNl9iBLl8HCLvcKA",
+    "city" : "Fort Walton Beach",
+    "country" : "US",
+    "id" : "yt-okaloosa-island",
+    "isLandmark" : false,
+    "name" : "Okaloosa Island",
+    "source" : "YouTube · Wyndham Garden Fort Walton Beach - Destin Hotel, FL"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCC7FQevLjRzajxhGb989szw",
+    "city" : "Miami",
+    "country" : "US",
+    "id" : "yt-miami-traffic",
+    "isLandmark" : false,
+    "name" : "Miami Traffic",
+    "source" : "YouTube · Florida Traffic"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCfFIv0FTqKR0vsIh94zZj2g",
+    "city" : "Kyoto",
+    "country" : "JP",
+    "id" : "yt-kyoto-keihoku",
+    "isLandmark" : false,
+    "name" : "Kyoto Keihoku",
+    "source" : "YouTube · 京都府京都市右京区京北周山町ライブカメラ"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCFbd69s_b63mA7qvpnG6U8Q",
+    "country" : "US",
+    "id" : "yt-news-8-now-city-cam",
+    "isLandmark" : false,
+    "name" : "News 8 Now City Cam",
+    "source" : "YouTube · News 8 Now City Cam"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCoxZcAinAWtvq3Ff-iEDnew",
+    "city" : "Peruíbe",
+    "country" : "BR",
+    "id" : "yt-peru-be-coast",
+    "isLandmark" : false,
+    "name" : "Peruíbe Coast",
+    "source" : "YouTube · Lente Livre - Litoral Sul São Paulo"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCp8FhsgzNmYR6F1HxTDMTvw",
+    "city" : "Kathmandu",
+    "country" : "NP",
+    "id" : "yt-kathmandu",
+    "isLandmark" : true,
+    "name" : "Kathmandu",
+    "source" : "YouTube · WEBCAM NEPAL CITIES & TOWNS"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCWuoYuUza2qNg4L2Di-rZsA",
+    "city" : "Berneray",
+    "country" : "GB",
+    "id" : "yt-berneray-east-beach",
+    "isLandmark" : false,
+    "name" : "Berneray East Beach",
+    "source" : "YouTube · East Beach Berneray"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCjjPsCV7_2yxPEfpU6izf1w",
+    "city" : "Airlie Beach",
+    "country" : "AU",
+    "id" : "yt-airlie-beach",
+    "isLandmark" : false,
+    "name" : "Airlie Beach",
+    "source" : "YouTube · Whitsunday Reflections"
+  },
+  {
+    "category" : "street",
     "channelId" : "UCMKGMyVkZ9G5fIlPJZIuolA",
     "city" : "Plymouth",
     "country" : "US",
@@ -1339,16 +798,17 @@
     "source" : "YouTube · Plymouth Park Cam"
   },
   {
-    "category" : "nature",
-    "channelId" : "UCLE4yTs2N2aKgNIYjcPry6w",
-    "country" : "CZ",
-    "id" : "yt-czech-bird-feeder",
+    "category" : "scenery",
+    "channelId" : "UCzdWPo-cHlPs4DPvpIH9Z3w",
+    "city" : "Miramar Beach",
+    "country" : "US",
+    "id" : "yt-miramar-beach",
     "isLandmark" : false,
-    "name" : "Czech Bird Feeder",
-    "source" : "YouTube · Z náklaďáku do zahrady"
+    "name" : "Miramar Beach",
+    "source" : "YouTube · La Dolce Vita"
   },
   {
-    "category" : "cityscape",
+    "category" : "street",
     "channelId" : "UCA08YALQbEO1UrJkBcvYzPQ",
     "city" : "Bangkok",
     "country" : "TH",
@@ -1358,7 +818,56 @@
     "source" : "YouTube · The Sunday Running BKK"
   },
   {
-    "category" : "cityscape",
+    "category" : "scenery",
+    "channelId" : "UCUyHh9bRlaPmQPuZ8B4Mt8A",
+    "city" : "Big Bear",
+    "country" : "US",
+    "id" : "yt-big-bear-mountain",
+    "isLandmark" : false,
+    "name" : "Big Bear Mountain",
+    "source" : "YouTube · Socalmountains"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCjQ-ACqme7YS5FeGS75DIfg",
+    "city" : "Lake Travis",
+    "country" : "US",
+    "id" : "yt-lake-travis",
+    "isLandmark" : false,
+    "name" : "Lake Travis",
+    "source" : "YouTube · Lake Travis Lake Cam"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCBA0Mp1Sfg8VW9D3XcswIMA",
+    "city" : "Harbour Island",
+    "country" : "BS",
+    "id" : "yt-harbour-island-bahamas",
+    "isLandmark" : false,
+    "name" : "Harbour Island, Bahamas",
+    "source" : "YouTube · LIVE SUNRISE AND SUNSETS IN HARBOUR ISLAND BAHAMAS"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCMS9Cn3rrAm7Sg_Ku5aWTCA",
+    "country" : "US",
+    "id" : "yt-arizona-desert-cam",
+    "isLandmark" : false,
+    "name" : "Arizona Desert Cam",
+    "source" : "YouTube · Jimwest1980"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UC4kQy5CW1gvNtm09ilf6XBQ",
+    "city" : "Seoul",
+    "country" : "KR",
+    "id" : "yt-mapo-bridge",
+    "isLandmark" : false,
+    "name" : "Mapo Bridge",
+    "source" : "YouTube · GiGAeyesliveTV City View"
+  },
+  {
+    "category" : "scenery",
     "channelId" : "UCz7CQR0xt-A4y1Asl9NBdUA",
     "city" : "Chicago",
     "country" : "US",
@@ -1366,5 +875,175 @@
     "isLandmark" : false,
     "name" : "Chicago South Skyline",
     "source" : "YouTube · Chicago Southern Skyline"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCOYc_DmojcPy7o1O9_0BBUw",
+    "city" : "Houston",
+    "country" : "US",
+    "id" : "yt-downtown-houston",
+    "isLandmark" : true,
+    "name" : "Downtown Houston",
+    "source" : "YouTube · Space City Live Cam"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCDA7I-sBCvrcVHTd8cZqSYg",
+    "city" : "Tampa",
+    "country" : "US",
+    "id" : "yt-tampa-beach",
+    "isLandmark" : false,
+    "name" : "Tampa Beach",
+    "source" : "YouTube · The Tampa Channel"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCAIhA0xG7iIwaYnUDP95C3w",
+    "city" : "Green Lake",
+    "country" : "US",
+    "id" : "yt-green-lake-weather-cam",
+    "isLandmark" : false,
+    "name" : "Green Lake Weather Cam",
+    "source" : "YouTube · Paul Couture"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCx7zzwIrKhGT3ybapASPXAQ",
+    "city" : "Hampton Bays",
+    "country" : "US",
+    "id" : "yt-shinnecock-dock",
+    "isLandmark" : false,
+    "name" : "Shinnecock Dock",
+    "source" : "YouTube · Hamptons Bay & Harbor Cams"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCbMSl7-RvWs4szJNHwdXCpg",
+    "city" : "Madeira Beach",
+    "country" : "US",
+    "id" : "yt-madeira-beach-marina",
+    "isLandmark" : false,
+    "name" : "Madeira Beach Marina",
+    "source" : "YouTube · Hubbard's Marina"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UC8gbWbcNNyb5-NIXvFklkOA",
+    "city" : "Greenville",
+    "country" : "US",
+    "id" : "yt-big-moose-mountain",
+    "isLandmark" : false,
+    "name" : "Big Moose Mountain",
+    "source" : "YouTube · Boston and Maine Live"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCH0VVepamGEc7ovAEAJPmWQ",
+    "city" : "Los Angeles",
+    "country" : "US",
+    "id" : "yt-downtown-la-skyline",
+    "isLandmark" : false,
+    "name" : "Downtown LA Skyline",
+    "source" : "YouTube · Dcline One"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCZkETwsAfT_cF6BEJt1fC3w",
+    "city" : "Panama City Beach",
+    "country" : "US",
+    "id" : "yt-panama-city-beach-gulf",
+    "isLandmark" : false,
+    "name" : "Panama City Beach Gulf",
+    "source" : "YouTube · Runaway Island in Panama City Beach"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCb3t1WM7PlQPyFhno5DFYwA",
+    "city" : "Gull Lake",
+    "country" : "US",
+    "id" : "yt-gull-lake",
+    "isLandmark" : false,
+    "name" : "Gull Lake",
+    "source" : "YouTube · Gull Lake LIVE WEBCAMS"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCE5jk2omKe23EUKPJtHlzEg",
+    "city" : "Bucharest",
+    "country" : "RO",
+    "id" : "yt-bucharest-calea-victoriei",
+    "isLandmark" : true,
+    "name" : "Bucharest Calea Victoriei",
+    "source" : "YouTube · Caught on camera"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCqH_TI67yWOokRzZi5g1fMg",
+    "city" : "Somerset",
+    "country" : "US",
+    "id" : "yt-lake-cumberland",
+    "isLandmark" : false,
+    "name" : "Lake Cumberland",
+    "source" : "YouTube · FOX 56 News"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCsy6UOjk8q7Ajq9yQ7iDAbA",
+    "city" : "Busan",
+    "country" : "KR",
+    "id" : "yt-songjeong-beach-busan",
+    "isLandmark" : false,
+    "name" : "Songjeong Beach, Busan",
+    "source" : "YouTube · GiGAeyes Live TV"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCUu85f--8fOKrjMCyYa5KkA",
+    "city" : "Southfield",
+    "country" : "US",
+    "id" : "yt-southfield-city-cam",
+    "isLandmark" : false,
+    "name" : "Southfield City Cam",
+    "source" : "YouTube · Southfield Cable 15"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCFiKd2rBxNjcQIeXmqj5rvQ",
+    "city" : "Hampton Bays",
+    "country" : "US",
+    "id" : "yt-hamptons-cams",
+    "isLandmark" : false,
+    "name" : "Hamptons Cams",
+    "source" : "YouTube · Hamptons Weather Live"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UC_JDyw-vsFmwJ35tojTiFeA",
+    "city" : "Valletta",
+    "country" : "MT",
+    "id" : "yt-malta-skyline",
+    "isLandmark" : false,
+    "name" : "Malta Skyline",
+    "source" : "YouTube · Birds Eye View Malta"
+  },
+  {
+    "category" : "street",
+    "channelId" : "UCAjAwOKrfmZX1552JnE_i5g",
+    "city" : "Olinda",
+    "country" : "BR",
+    "id" : "yt-olinda-brazil",
+    "isLandmark" : false,
+    "name" : "Olinda, Brazil",
+    "source" : "YouTube · Tá ao vivo"
+  },
+  {
+    "category" : "scenery",
+    "channelId" : "UCNj9RYj1GJLP9WvtEiYHHEw",
+    "city" : "Benidorm",
+    "country" : "ES",
+    "id" : "yt-benidorm-skyline",
+    "isLandmark" : false,
+    "name" : "Benidorm Skyline",
+    "source" : "YouTube · Benidorm Skyline Live"
   }
 ]
