@@ -1,0 +1,101 @@
+{
+  "channels" : {
+    "UC-52ACkTFkgPZ0qbLtNhalg" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 2,
+      "note" : "在播但所有者关了嵌入",
+      "outcome" : "notEmbeddable"
+    },
+    "UCBA0Mp1Sfg8VW9D3XcswIMA" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 2,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UCC7FQevLjRzajxhGb989szw" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 5,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UCDA7I-sBCvrcVHTd8cZqSYg" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 1,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UCEGtTnZoEFhF8NVF6-yps2Q" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 1,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UCGKHH__rkALfJJtc0HMIEwQ" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 1,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UCNOXlPIEg4nNvCqlInpKcXw" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 5,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UCUkUjr4syovc3NbLWtuVfYw" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 5,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UCWuoYuUza2qNg4L2Di-rZsA" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 2,
+      "note" : "在播但所有者关了嵌入",
+      "outcome" : "notEmbeddable"
+    },
+    "UCZkETwsAfT_cF6BEJt1fC3w" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 2,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UC_RgXISXHXYaW0WLiGHRMPw" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 1,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UC_p-x5S9NXmM1sObuQdapeQ" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 2,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UCdr9cCd_WQPlLCAUjNaoACg" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 5,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UCfFIv0FTqKR0vsIh94zZj2g" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 1,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UCjQ-ACqme7YS5FeGS75DIfg" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 5,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    },
+    "UCou65n58xvgd6BBkrbluObQ" : {
+      "lastCheckedAt" : "2026-10-17T07:48:28Z",
+      "misses" : 1,
+      "note" : "窗口与兜底都没找到在播的流",
+      "outcome" : "offAir"
+    }
+  },
+  "generatedAt" : "2026-10-17T07:48:28Z"
+}
